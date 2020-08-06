@@ -5,6 +5,7 @@
     position: fixed;
 }
 .carousel-item{
+    /* background-image: url(asset/img/2.jpg); */
     background-image: url(asset/img/2.jpg);
 }
 .carousel-item .dalam{
@@ -27,9 +28,18 @@ nav{
     margin-bottom: 25vh;
     margin-left: 50vw;
     transform: translate(-50%) ;
+    /* font-family: 'Dekko'; */
+    font-family: 'Didact Gothic';
+    color: rgb(236, 220, 204);
 }
 .bg-change{
     background-color: rgba(0, 0, 0, .6);
     height: 100%;
     width: 100%;
+}
+#nav-mobile{
+    font-family: 'Dekko';
+}
+#nav-mobile li a{
+    font-size: 20px;
 }
