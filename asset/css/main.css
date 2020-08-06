@@ -1,3 +1,4 @@
+/* SECTION UP */
 .carousel{
     height: 100vh;
 }
@@ -5,7 +6,7 @@
     position: fixed;
 }
 .carousel-item{
-    /* background-image: url(asset/img/2.jpg); */
+    background-image: url(asset/img/2.jpg);
     background-image: url(asset/img/2.jpg);
 }
 .carousel-item .dalam{
@@ -42,4 +43,23 @@ nav{
 }
 #nav-mobile li a{
     font-size: 20px;
+}
+#nav-mobile li a:hover{
+    color: black;
+}
+/* SSECTION DOWN */
+.row{
+    text-align: center;
+    margin-bottom: 0;
+}
+.row .col img{
+    width: 50%;
+    padding-top: 2.5vh;
+}
+.col:hover{
+    background-color: rgba(0, 0, 0, 0.212);
+}
+.col:before{
+    background-color: brown;
+    width: 40%;
 }
