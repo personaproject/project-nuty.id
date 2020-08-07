@@ -5,9 +5,6 @@
 .navbar-fixed{
     position: fixed;
 }
-.carousel-item{
-    background-image: url("asset/img/2.jpg");
-}
 .carousel-item .dalam{
     margin-top: 10vh;
 }
