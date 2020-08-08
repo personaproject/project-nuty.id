@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         fullWidth : true,
         indicators : true,
     });
+    var modal = document.querySelectorAll(".modal");
+    var initmodal = M.Modal.init(modal, {});
   });
 function arise(){
     d = document.querySelectorAll(".dalam");
