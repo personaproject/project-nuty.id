@@ -66,3 +66,6 @@ nav{
 .p1{
     padding: 1rem;
 }
+.black-nav{
+    background-color: rgba(0, 0, 0, .4);
+}
