@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <!--Linked CSS-->
     <link rel="stylesheet" href="asset/css/materialize.min.css">
     <link rel="stylesheet" href="asset/css/animate.css">
     <link rel="stylesheet" href="asset/css/main.css">
     <link rel="stylesheet" href="asset/css/jquery.pagepiling.css">
-    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <!--SEO-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='YOUR-KEYWORD-HERE' name='keywords'/>
+    <meta content='AUTHOR-NAME-HERE' name='Author'/>
+    <meta content='GOOGLE-META-TAG' name='google-site-verification'/>
+    <meta content='BING-META-TAG' name='msvalidate.01'/>
+    <meta content='ALEXA-META-TAG' name='alexaVerifyID'/>
+    <!--Title and Icon-->
     <title>Nuty.ID</title>
+    
+    <!--Additional CSS (for Developing only)-->
     <style>
         .carousel-item{
         background-image: url(asset/img/2.jpg)
@@ -18,6 +29,7 @@
 </head>
 <body>
     <header>
+        <!--Navbar content Here-->
         <div class="navbar-fixed">
         <nav>
             <div class="container">
@@ -26,14 +38,16 @@
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="badges.html">About</a></li>
-                <!-- <li><a href="collapsible.html">JavaScript</a></li> -->
               </ul>
             </div>
           </nav></div>                  
     </header>
     <main>
+    <!--PagePilling Section
+        Each Section is one page card-->
         <div id="pagepiling">
             <div class="section">
+                <!--Carousel Slider-->
                 <div class="carousel carousel-slider">
                     <div class="carousel-fixed-item center">
                       <h3 class="slogan" onmouseover="arise()" onmouseout="disappear()">
@@ -101,6 +115,7 @@
         </div>
     </main>
     <footer></footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="asset/js/jquery.pagepiling.js"></script>
     <script src="asset/js/materialize.min.js"></script>
