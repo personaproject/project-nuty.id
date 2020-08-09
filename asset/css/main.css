@@ -69,3 +69,9 @@ nav{
 .black-nav{
     background-color: rgba(0, 0, 0, .4);
 }
+.pointer{
+    cursor: pointer;
+}
+.nuty-color{
+    background-color: #FFB34D;
+}
