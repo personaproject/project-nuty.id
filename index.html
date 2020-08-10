@@ -24,7 +24,8 @@
     <!--Additional CSS (for Developing only)-->
     <style>
         .carousel-item{
-        background-image: url(asset/img/2.jpg)
+        background-image: url(asset/img/mask\ 3.jpg);
+        background-size:contain;
         }
     </style>
 </head>
@@ -35,7 +36,9 @@
         <nav id="navbar">
             <div class="container">
             <div class="nav-wrapper">
-              <a href="#" class="brand-logo">Logo</a>
+              <a href="#" class="brand-logo">
+                <img src="asset/img/logo.svg" alt="">
+              </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="badges.html">About</a></li>
@@ -77,35 +80,35 @@
                     </div>
                   </div>
             </div>
-            <div class="section nuty-color" style="height: 100vh;">
+            <div class="section nuty-color " style="height: 100vh;">
                 <div class="row container">
 
-                    <div class="col s6 m4 modal-trigger pointer" href="#modal1">
+                    <div class="col s6 m4 modal-trigger pointer" onclick="noMove()"  href="#modal1" >
                         <img src="asset/img/mask 2.jpg" alt="">
                       <!-- Promo Content 1 goes here -->
                         <p>CHECK separated</p>
                     </div>
-                    <div class="col s6 m4 modal-trigger pointer" href="#modal2">
+                    <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal2">
                         <img src="asset/img/mask 2.jpg" alt="">
                         <p>CHECK separated</p>
                         <!-- Promo Content 2 goes here -->
                     </div>
-                    <div class="col s6 m4 modal-trigger pointer" href="#modal3">
+                    <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal3">
                         <img src="asset/img/mask 2.jpg" alt="">
                         <p>CHECK separated</p>
                       <!-- Promo Content 3 goes here -->
                     </div>
-                    <div class="col s6 m4 modal-trigger pointer" href="#modal4">
+                    <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal4">
                         <img src="asset/img/mask 2.jpg" alt="">
                         <!-- Promo Content 1 goes here -->
                         <p>CHECK separated</p>
                     </div>
-                    <div class="col s6 m4 modal-trigger pointer" href="#modal5">
+                    <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal5">
                         <img src="asset/img/mask 2.jpg" alt="">
                         <p>CHECK separated</p>
                           <!-- Promo Content 2 goes here -->
                     </div>
-                    <div class="col s6 m4 modal-trigger pointer" href="#modal6">
+                    <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal6">
                         <img src="asset/img/mask 2.jpg" alt="">
                         <p>CHECK separated</p>
                         <!-- Promo Content 3 goes here -->
@@ -113,72 +116,152 @@
                     <!-- Modal Structure -->
                     <div id="modal1" class="modal modal-fixed-footer">
                       <div class="right p1">
-                        <a class="waves-effect waves-teal btn-flat modal-close"><i class="material-icons">close</i></a>
+                        <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
                       </div>
                       <div class="modal-content">
-                        <h4>Modal Header</h4>
-                        <p>A bunch of text</p>
+                        <div class="row">
+                          <div class="col s12 m6 foto_produk">
+                            <img class="responsive-img" src="/asset/img/mask 3.jpg" alt="">
+                          </div>
+                          <div class="col s12 m6 des_produk left-align">
+                            <div class="plank">
+                              <h4>JUDUL</h4>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
+                            <p>SERI 1</p>
+                            <p>SERI 2</p>
+                            <p>SERI 3</p>
+                            </div>
+                          </div>  
+                        </div>
                       </div>
-                      <div class="modal-footer">
+                      <div class="modal-footer black">
                       </div>
-                     </div>
+                      </div>
+                      
                      <div id="modal2" class="modal modal-fixed-footer">
-                        <div class="right p1">
-                          <a class="waves-effect waves-teal btn-flat modal-close"><i class="material-icons">close</i></a>
+                      <div class="right p1">
+                        <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
+                      </div>
+                      <div class="modal-content">
+                        <div class="row">
+                          <div class="col s12 m6 foto_produk">
+                            <img class="responsive-img" src="/asset/img/mask 3.jpg" alt="">
+                          </div>
+                          <div class="col s12 m6 des_produk left-align">
+                            <div class="plank">
+                              <h4>JUDUL</h4>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
+                            <p>SERI 1</p>
+                            <p>SERI 2</p>
+                            <p>SERI 3</p>
+                            </div>
+                          </div>  
                         </div>
-                        <div class="modal-content">
-                          <h4>Modal Header</h4>
-                          <p>A bunch of text</p>
-                        </div>
-                        <div class="modal-footer">
-                        </div>
+                      </div>
+                      <div class="modal-footer black">
+                      </div>
                        </div> 
                        <div id="modal3" class="modal modal-fixed-footer">
                         <div class="right p1">
-                          <a class="waves-effect waves-teal btn-flat modal-close"><i class="material-icons">close</i></a>
+                          <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
                         </div>
                         <div class="modal-content">
-                          <h4>Modal Header</h4>
-                          <p>A bunch of text</p>
+                          <div class="row">
+                            <div class="col s12 m6 foto_produk">
+                              <img class="responsive-img" src="/asset/img/mask 3.jpg" alt="">
+                            </div>
+                            <div class="col s12 m6 des_produk left-align">
+                              <div class="plank">
+                                <h4>JUDUL</h4>
+                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
+                              <p>SERI 1</p>
+                              <p>SERI 2</p>
+                              <p>SERI 3</p>
+                              </div>
+                            </div>  
+                          </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer black">
                         </div>
                        </div>
                        <div id="modal4" class="modal modal-fixed-footer">
                         <div class="right p1">
-                          <a class="waves-effect waves-teal btn-flat modal-close"><i class="material-icons">close</i></a>
+                          <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
                         </div>
                         <div class="modal-content">
-                          <h4>Modal Header</h4>
-                          <p>A bunch of text</p>
+                          <div class="row">
+                            <div class="col s12 m6 foto_produk">
+                              <img class="responsive-img" src="/asset/img/mask 3.jpg" alt="">
+                            </div>
+                            <div class="col s12 m6 des_produk left-align">
+                              <div class="plank">
+                                <h4>JUDUL</h4>
+                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
+                              <p>SERI 1</p>
+                              <p>SERI 2</p>
+                              <p>SERI 3</p>
+                              </div>
+                            </div>  
+                          </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer black">
                         </div>
                        </div>
                        <div id="modal5" class="modal modal-fixed-footer">
                         <div class="right p1">
-                          <a class="waves-effect waves-teal btn-flat modal-close"><i class="material-icons">close</i></a>
+                          <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
                         </div>
                         <div class="modal-content">
-                          <h4>Modal Header</h4>
-                          <p>A bunch of text</p>
+                          <div class="row">
+                            <div class="col s12 m6 foto_produk">
+                              <img class="responsive-img" src="/asset/img/mask 3.jpg" alt="">
+                            </div>
+                            <div class="col s12 m6 des_produk left-align">
+                              <div class="plank">
+                                <h4>JUDUL</h4>
+                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
+                              <p>SERI 1</p>
+                              <p>SERI 2</p>
+                              <p>SERI 3</p>
+                              </div>
+                            </div>  
+                          </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer black">
                         </div>
                        </div>
                        <div id="modal6" class="modal modal-fixed-footer">
                         <div class="right p1">
-                          <a class="waves-effect waves-teal btn-flat modal-close"><i class="material-icons">close</i></a>
+                          <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
                         </div>
                         <div class="modal-content">
-                          <h4>Modal Header</h4>
-                          <p>A bunch of text</p>
+                          <div class="row">
+                            <div class="col s12 m6 foto_produk">
+                              <img class="responsive-img" src="/asset/img/mask 3.jpg" alt="">
+                            </div>
+                            <div class="col s12 m6 des_produk left-align">
+                              <div class="plank">
+                                <h4>JUDUL</h4>
+                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
+                              <p>SERI 1</p>
+                              <p>SERI 2</p>
+                              <p>SERI 3</p>
+                              </div>
+                            </div>  
+                          </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer black">
                         </div>
-                       </div>                    
-                  </div>
+                       </div>  
+                       </div>                  
             </div>
+            <div class="section black"></div>
         </div>
     </main>
     <footer></footer>

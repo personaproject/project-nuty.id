@@ -12,7 +12,7 @@
     display: none;
 }
 nav{
-    background-color: transparent;
+    background-color: #fffa01;
     box-shadow: none;
 }
 .section{
@@ -27,7 +27,7 @@ nav{
     transform: translate(-50%) ;
     /* font-family: 'Dekko'; */
     font-family: 'Didact Gothic';
-    color: rgb(236, 220, 204);
+    color: #FFE264;
 }
 .bg-change{
     background-color: rgba(0, 0, 0, .6);
@@ -39,6 +39,8 @@ nav{
 }
 #nav-mobile li a{
     font-size: 20px;
+    color: #9C7F00;
+    
 }
 #nav-mobile li a:hover{
     color: black;
@@ -48,20 +50,18 @@ nav{
     text-align: center;
     margin-bottom: 0;
 }
-.row .col img{
+.row .col.pointer img{
     width: 50%;
     padding-top: 2.5vh;
 }
-.col:hover{
-    background-color: rgba(0, 0, 0, 0.212);
-}
-.col:before{
-    background-color: brown;
-    width: 40%;
+.row .col.pointer:hover{
+    transition: 0.5s ease-in-out;
+    background-color: #FF9200;
+    background-size: cover;
 }
 .modal{
     max-height: 80%;
-    width: 90%;
+    width: 70%;
 }
 .p1{
     padding: 1rem;
@@ -73,5 +73,25 @@ nav{
     cursor: pointer;
 }
 .nuty-color{
-    background-color: #FFB34D;
+    background-color: #FFFEC8;
+}
+.foto_produk{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.foto_produk img{
+    height: 100%;
+    
+}
+.des_produk{
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+.des_product .plank{
+    overflow-y: auto;
+}
+.modal-content .row{
+    height: 100%;
 }
