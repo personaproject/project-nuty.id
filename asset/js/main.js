@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	$('#pagepiling').pagepiling();
+	$('#pagepiling').pagepiling({
+        navigation: null,
+    });
 });
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel.carousel-slider');
@@ -16,9 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   function noMove(){
     $.fn.pagepiling.setMouseWheelScrolling(false);
+    $.fn.pagepiling.setKeyboardScrolling(false);
   }
   function allowMove(){
     $.fn.pagepiling.setMouseWheelScrolling(true);
+    $.fn.pagepiling.setKeyboardScrolling(true);
   }
 function arise(){
     d = document.querySelectorAll(".dalam");

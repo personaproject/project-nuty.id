@@ -88,10 +88,12 @@ nav{
     display: grid;
     place-items: center;
     height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.des_product .plank{
-    overflow-y: auto;
-}
+.des_product::-webkit-scrollbar {
+    display: none;
+  }
 .modal-content .row{
     height: 100%;
 }
