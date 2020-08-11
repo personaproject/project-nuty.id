@@ -97,3 +97,10 @@ nav{
 .modal-content .row{
     height: 100%;
 }
+.modal-content{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.modal-content::-webkit-scrollbar {
+    display: none;
+  }
