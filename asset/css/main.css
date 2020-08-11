@@ -14,6 +14,7 @@
 .nuty-color{
     background-color: #FFFEC8;
 }
+
 /* SECTION UP */
 .carousel{
     height: 100vh;
@@ -56,7 +57,9 @@ nav{
 .carousel.carousel-slider .carousel-fixed-item{
     top:20%;
     bottom: unset;
-
+}
+.indicator-item.active{
+    transform: scale(1.5);
 }
 .slogan{
     margin-bottom: 0;

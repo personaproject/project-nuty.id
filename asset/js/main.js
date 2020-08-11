@@ -1,13 +1,15 @@
 $(document).ready(function() {
 	$('#pagepiling').pagepiling({
         navigation: null,
+        anchors: ['home', 'product', 'contact'],
+        menu: '#nav-mobile',
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel.carousel-slider');
     var instances = M.Carousel.init(elems,{
         fullWidth : true,
-        indicators : false,
+        indicators : true,
     });
     var modal = document.querySelectorAll(".modal");
     var initmodal = M.Modal.init(modal, {

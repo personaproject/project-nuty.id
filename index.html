@@ -34,8 +34,9 @@
                 <img src="asset/img/logoo.svg" alt="">
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="badges.html">About</a></li>
+                <li><a data-menuanchor="home" class="active" href="#home">Home</a></li>
+                <li><a data-menuanchor="product" href="#product">Product</a></li>
+                <li><a data-menuanchor="contact" href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -92,7 +93,7 @@
         </div>
 
         <!-- MAIN -->
-        <div class="section nuty-color " style="height: 100vh;">
+        <div class="section nuty-color" id="product" style="height: 100vh;">
           <div class="row container">
             <div class="col s6 m4 modal-trigger pointer" onclick="noMove()"  href="#modal1" >
               <img src="asset/img/imacw.jpg" alt="">
@@ -278,7 +279,7 @@
           </div>                  
         </div>
         <!-- FOOTER WANNA BE -->
-        <div class="section black"></div>
+        <div class="section black" id="contact"></div>
       </div>
     </main>
     <footer></footer>
