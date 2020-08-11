@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	$('#pagepiling').pagepiling({
         navigation: null,
+        anchors: ['home', 'product', 'contact'],
+        menu: '#nav-mobile',
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,6 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
         startingTop: "unset",
         endingTop: "unset",
     });
+    autoplay();
+function autoplay(){
+    let carousel = document.querySelector('.carousel.carousel-slider');
+    M.Carousel.getInstance(carousel).next();
+    setTimeout(autoplay, 4500);
+}
   });
   function noMove(){
     $.fn.pagepiling.setMouseWheelScrolling(false);
@@ -24,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $.fn.pagepiling.setMouseWheelScrolling(true);
     $.fn.pagepiling.setKeyboardScrolling(true);
   }
+/*
 function arise(){
     d = document.querySelectorAll(".dalam");
     e = document.querySelectorAll(".bg-change");
@@ -54,6 +63,7 @@ function disappear(){
         element.style.transition ="0.5s ease-in-out"
     });
 }
+*/
 window.onscroll = function(){scrollFunction()};
 function scrollFunction(){
     var navbar = document.getElementById("navbar");

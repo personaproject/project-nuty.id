@@ -22,28 +22,6 @@
     <title>Nuty.ID</title>
     
     <!--Additional CSS (for Developing only)-->
-    <style>
-        .carousel-item{
-        /* background-image: url(asset/img/imacb.jpg);
-        background-size:contain; */
-        }
-        .red{
-          background-image: url(asset/img/FOTOMENUPILIHAN/Beef\ blackpepper.JPG);
-          background-size:cover;
-        }
-        .yellow{
-          background-image: url(asset/img/FOTOMENUPILIHAN/beef\ teriyaki.JPG);
-          background-size:cover;
-        }
-        .green{
-          background-image: url(asset/img/FOTOMENUPILIHAN/Pancake.JPG);
-          background-size:cover;
-        }
-        .blue{
-          background-image: url(asset/img/FOTOMENUPILIHAN/Greentea\ banana\ smoothies.jpg);
-          background-size:cover;
-        }
-    </style>
   </head>
   <body>
     <header>
@@ -56,8 +34,9 @@
                 <img src="asset/img/logoo.svg" alt="">
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="badges.html">About</a></li>
+                <li><a data-menuanchor="home" class="active" href="#home">Home</a></li>
+                <li><a data-menuanchor="product" href="#product">Product</a></li>
+                <li><a data-menuanchor="contact" href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -72,36 +51,41 @@
         <div class="section">
           <!--Carousel Slider-->
           <div class="carousel carousel-slider">
-            <div class="carousel-fixed-item center">
-              <h3 class="slogan" onmouseover="arise()" onmouseout="disappear()">
-                Be Healthy with Nuty
+            <div class="carousel-fixed-item center noselect">
+              <h3 class="slogan">
+                Stay Healthy with Nuty
               </h3>
+              <h5 class="white-text">Healthy and Delicious Food</h5>
             </div>
-            <div class="carousel-item red" href="#one!">
+            <div class="carousel-item red" style="background-image: url(asset/img/menu/Beef_blackpepper.jpg);" href="#one!">
               <div class="bg-change">
-                <div class="dalam container"><div class=" white-text"><h2 class="name-product">beef blackpepper</h2>
-                  <p class="white-text">This is your first panel</p></div>
+                <div class="dalam noselect"><div class="white-text">
+                  <p class="name-product">beef blackpepper</p>
+                  <p class="des-product">Product Description</p></div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item yellow" href="#two!">
+            <div class="carousel-item yellow" style="background-image: url(asset/img/menu/beef_teriyaki.jpg);" href="#two!">
               <div class="bg-change">
-                <div class="dalam container"><div class=" white-text"><h2 class="name-product">beef teriyaki</h2>
-                  <p class="white-text">This is your second panel</p></div>
+                <div class="dalam noselect"><div class="white-text">
+                  <p class="name-product">beef teriyaki</p>
+                  <p class="des-product">Product Description</p></div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item green" href="#three!">
+            <div class="carousel-item green" style="background-image: url(asset/img/menu/Pancake.jpg);" href="#three!">
               <div class="bg-change">
-                <div class="dalam container"><div class=" white-text"><h2 class="name-product">pancake</h2>
-                  <p class="white-text">This is your third panel</p></div>
+                <div class="dalam noselect"><div class="white-text">
+                  <p class="name-product">Pancake</p>
+                  <p class="des-product">Product Description</p></div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item blue" href="#four!">
+            <div class="carousel-item blue" style="background-image: url(asset/img/menu/Greentea_banana_smoothies.jpg);" href="#four!">
               <div class="bg-change">
-                <div class="dalam container"><div class=" white-text"><h2 class="name-product">greentea banana smoothies</h2>
-                  <p class="white-text">This is your fourth panel</p></div>
+                <div class="dalam noselect"><div class="white-text">
+                  <p class="name-product">Greente banana smoothies</p>
+                  <p class="des-product">Product Description</p></div>
                 </div>
               </div>
             </div>
@@ -109,7 +93,7 @@
         </div>
 
         <!-- MAIN -->
-        <div class="section nuty-color " style="height: 100vh;">
+        <div class="section nuty-color" id="product" style="height: 100vh;">
           <div class="row container">
             <div class="col s6 m4 modal-trigger pointer" onclick="noMove()"  href="#modal1" >
               <img src="asset/img/imacw.jpg" alt="">
@@ -295,7 +279,7 @@
           </div>                  
         </div>
         <!-- FOOTER WANNA BE -->
-        <div class="section black"></div>
+        <div class="section black" id="contact"></div>
       </div>
     </main>
     <footer></footer>

@@ -1,3 +1,20 @@
+/* TOOLS*/
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+.pointer{
+    cursor: pointer;
+}
+.nuty-color{
+    background-color: #FFFEC8;
+}
+
 /* SECTION UP */
 .carousel{
     height: 100vh;
@@ -5,18 +22,27 @@
 .navbar-fixed{
     position: fixed;
 }
-.carousel-item .dalam{
-    margin-top: 10vh;
+.carousel-item{
+    background-size: cover;
+    background-position: center center;
 }
-.dalam{
-    display: none;
+
+.carousel-item .dalam{
+    position: fixed;
+    bottom: 20px;
+    left: 2em;
 }
 .carousel.carousel-slider .carousel-item .name-product{
+    margin-bottom: 0;
     text-transform: uppercase;
     font-family: 'Didact Gothic';
-    font-size: 60px;
-    font-weight: 500;
-    line-height: unset;
+    font-weight: bold;
+    line-height: 0.3;
+}
+.carousel.carousel-slider .carousel-item .des-product{
+    font-family: 'Didact Gothic';
+    font-weight: lighter;
+    font-size: smaller;
 }
 .carousel.carousel-slider .carousel-item p{
     font-size: 25px;
@@ -28,11 +54,15 @@ nav{
 .section{
     padding: 0;
 }
-.carousel.carousel-slider .carousel-fixed-item.with-indicators{
-    bottom: 0;
+.carousel.carousel-slider .carousel-fixed-item{
+    top:20%;
+    bottom: unset;
+}
+.indicator-item.active{
+    transform: scale(1.5);
 }
 .slogan{
-    margin-bottom: 25vh;
+    margin-bottom: 0;
     margin-left: 50vw;
     transform: translate(-50%) ;
     /* font-family: 'Dekko'; */
@@ -79,12 +109,7 @@ nav{
 .black-nav{
     background-color: rgba(0, 0, 0, .4);
 }
-.pointer{
-    cursor: pointer;
-}
-.nuty-color{
-    background-color: #FFFEC8;
-}
+
 .foto_produk{
     height: 100%;
     display: grid;
