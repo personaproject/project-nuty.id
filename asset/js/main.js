@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel.carousel-slider');
     var instances = M.Carousel.init(elems,{
         fullWidth : true,
-        indicators : true,
+        indicators : false,
     });
     var modal = document.querySelectorAll(".modal");
     var initmodal = M.Modal.init(modal, {
@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         startingTop: "unset",
         endingTop: "unset",
     });
+    autoplay();
+function autoplay(){
+    let carousel = document.querySelector('.carousel.carousel-slider');
+    M.Carousel.getInstance(carousel).next();
+    setTimeout(autoplay, 4500);
+}
   });
   function noMove(){
     $.fn.pagepiling.setMouseWheelScrolling(false);
@@ -24,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $.fn.pagepiling.setMouseWheelScrolling(true);
     $.fn.pagepiling.setKeyboardScrolling(true);
   }
+/*
 function arise(){
     d = document.querySelectorAll(".dalam");
     e = document.querySelectorAll(".bg-change");
@@ -54,6 +61,7 @@ function disappear(){
         element.style.transition ="0.5s ease-in-out"
     });
 }
+*/
 window.onscroll = function(){scrollFunction()};
 function scrollFunction(){
     var navbar = document.getElementById("navbar");
