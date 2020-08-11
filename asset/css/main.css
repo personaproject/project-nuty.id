@@ -11,6 +11,16 @@
 .dalam{
     display: none;
 }
+.carousel.carousel-slider .carousel-item .name-product{
+    text-transform: uppercase;
+    font-family: 'Didact Gothic';
+    font-size: 60px;
+    font-weight: 500;
+    line-height: unset;
+}
+.carousel.carousel-slider .carousel-item p{
+    font-size: 25px;
+}
 nav{
     background-color: #fffa01;
     box-shadow: none;
