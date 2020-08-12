@@ -93,6 +93,7 @@ nav{
 .row .col.pointer img{
     width: 50%;
     padding-top: 2.5vh;
+    object-fit: cover;
 }
 .row .col.pointer:hover{
     transition: 0.5s ease-in-out;
@@ -117,11 +118,13 @@ nav{
 }
 .foto_produk img{
     height: 100%;
+    object-fit: cover;
     
 }
 .des_produk{
     display: grid;
     place-items: center;
+    overflow-y: auto;
     height: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -133,8 +136,9 @@ nav{
     height: 100%;
 }
 .modal-content{
-    scrollbar-width: none;
+    overflow-y: hidden;
     -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .modal-content::-webkit-scrollbar {
     display: none;
