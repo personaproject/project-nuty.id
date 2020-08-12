@@ -1,8 +1,6 @@
 $(document).ready(function() {
 	$('#pagepiling').pagepiling({
         navigation: null,
-        anchors: ['home', 'product', 'contact'],
-        menu: '#nav-mobile',
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +29,9 @@ function autoplay(){
   function allowMove(){
     $.fn.pagepiling.setMouseWheelScrolling(true);
     $.fn.pagepiling.setKeyboardScrolling(true);
+  }
+  function movePage(n){
+    $.fn.pagepiling.moveTo(n);
   }
 /*
 function arise(){
