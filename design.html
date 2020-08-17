@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <!--Linked CSS-->
+      <!--Font-->
+      <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--  -->
+      <!--Linked CSS-->
     <link rel="stylesheet" href="asset/css/materialize.min.css">
     <link rel="stylesheet" href="asset/css/animate.css">
     <link rel="stylesheet" href="asset/css/main.css">
@@ -17,6 +21,7 @@
     <meta content='ALEXA-META-TAG' name='alexaVerifyID'/>
     <!--Title and Icon-->
     <title>Nuty.ID</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     
     <!--Additional CSS (for Developing only)-->
   </head>
@@ -25,15 +30,15 @@
     </header>
     
     <main>
-        <div class="price-label right">
-            <div class="rp">
-                <p>Rp</p>
+        <div class="container product">
+            <div id="food" class="product-contain bg-contain1" onclick="openFood()">
+              <h1 class="judul">Pakanan</h1>
+              <!-- <img class="food-img" src="asset/img/mask2.jpg" alt=""> -->
+              <i class="material-icons-round medium center">bento</i>
             </div>
-            <div class="actual">
-                <h4 class="center">43</h4>
-            </div>
-            <div class="ribu">
-                <p>000</p>
+            <div id="beverage" class="product-contain bg-contain2" onclick="openBvg()">
+              <h1 class="judul right-align">Wedang</h1>
+              <i class="material-icons-round medium center">local_drink</i>
             </div>
         </div>
     </main>
@@ -41,7 +46,70 @@
 
 
     <script src="asset/js/materialize.min.js"></script>
-    <script src="asset/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var collap = document.querySelectorAll('.collapsible');
+    var collapIns = M.Collapsible.init(collap, {});
+  });
+  function openFood(){
+    let idsOpen= document.getElementById("food");
+    let idsClose = document.getElementById("beverage");
+    idsOpen.style.width = "90%";
+    idsOpen.style.display = "inline"
+    idsOpen.children[0].style.writingMode = "unset"
+    idsOpen.children[0].style.textOrientation = "unset"
+    idsOpen.children[0].style.fontSize = "1.6rem"
+    idsOpen.children[1].style.display = "none";
+    idsOpen.children[0].classList.add("kembali");
+    idsOpen.onclick = backTo;
+    idsClose.onclick = openBvg;
+    idsClose.style.width = "10%";
+    idsClose.style.display="grid";
+    idsClose.children[0].style.writingMode = "vertical-rl"
+    idsClose.children[0].style.textOrientation = "upright"
+    idsClose.children[0].style.fontSize = "2rem"
+    idsClose.children[1].style.display = "block";
+
+  }
+  function openBvg(){
+    let idsOpen= document.getElementById("beverage");
+    let idsClose = document.getElementById("food");
+    idsOpen.style.width = "90%";
+    idsOpen.style.display = "inline"
+    idsOpen.children[0].style.writingMode = "unset"
+    idsOpen.children[0].style.textOrientation = "unset"
+    idsOpen.children[0].style.fontSize = "1.6rem"
+    idsOpen.children[1].style.display = "none";
+    idsOpen.children[0].classList.add("kembali");
+    idsOpen.onclick = backTo;
+    idsClose.onclick = openFood;
+    idsClose.style.display="grid";
+    idsClose.style.width = "10%";
+    idsClose.children[0].style.writingMode = "vertical-rl"
+    idsClose.children[0].style.textOrientation = "upright"
+    idsClose.children[0].style.fontSize = "2rem"
+    idsClose.children[1].style.display = "block";
+
+  }
+  function backTo(){
+    let idsOpen= document.getElementById("food");
+    let idsClose = document.getElementById("beverage");
+    idsOpen.style.width="50%"
+    idsOpen.onclick = openFood;
+    idsClose.onclick = openBvg;
+    idsClose.style.width="50%"
+    idsOpen.children[0].style.writingMode = "unset"
+    idsOpen.children[0].style.textOrientation = "unset"
+    idsOpen.children[1].style.display = "block";
+    idsOpen.children[0].classList.remove("kembali");
+    idsOpen.style.display = "grid"
+    idsClose.children[0].style.writingMode = "unset"
+    idsClose.children[0].style.textOrientation = "unset"
+    idsClose.children[1].style.display = "block";
+    idsClose.children[0].classList.remove("kembali");
+    idsClose.style.display = "grid"
+  }
+    </script>
 
   </body>
 </html>

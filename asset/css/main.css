@@ -5,14 +5,18 @@
        -khtml-user-select: none; /* Konqueror HTML */
          -moz-user-select: none; /* Old versions of Firefox */
           -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
+              user-select: none; 
   }
 .pointer{
     cursor: pointer;
 }
 .nuty-color{
     background-color: #FFFEC8;
+}
+.bg-change{
+    background-color: rgba(0, 0, 0, .25);
+    height: 100%;
+    width: 100%;
 }
 
 /* SECTION UP */
@@ -40,16 +44,17 @@
     line-height: 0.3;
 }
 .carousel.carousel-slider .carousel-item .des-product{
-    font-family: 'Didact Gothic';
-    font-weight: lighter;
+    font-family: 'Noto Sans';
+    /* font-weight: bolder; */
     font-size: smaller;
 }
 .carousel.carousel-slider .carousel-item p{
     font-size: 25px;
 }
 nav{
-    background-color: #fffa01;
-    box-shadow: none;
+    /* background-color: #fffa01; */
+    background-color: #FFCB01;
+    
 }
 .section{
     padding: 0;
@@ -69,21 +74,23 @@ nav{
     font-family: 'Didact Gothic';
     color: #FFE264;
 }
-.bg-change{
-    background-color: rgba(0, 0, 0, .6);
-    height: 100%;
-    width: 100%;
-}
+
+
 #nav-mobile{
     font-family: 'Dekko';
 }
+#nav-mobile li:hover{
+    background-color: #FF9200;
+    /* border-radius: 0 0 30px 30px; */
+    /* border-spacing: 10px; */
+}
 #nav-mobile li a{
     font-size: 20px;
-    color: #9C7F00;
+    color: #FFFEC8;
     
 }
 #nav-mobile li a:hover{
-    color: black;
+    /* color: #FFFEC8; */
 }
 /* SSECTION DOWN */
 .row{
@@ -142,4 +149,51 @@ nav{
 }
 .modal-content::-webkit-scrollbar {
     display: none;
-  }
+}
+
+
+/*  */
+.lower h3{
+    color: #FF9200;
+}
+.lower p{
+    color: #FF9200;
+}
+/*
+Design
+*/
+.product{
+    display: flex;
+    height: 100vh;
+    /* padding-top: 10vh; */
+}
+.product-contain{
+    padding: 3%;
+    padding-top: 10%;
+    width: 50%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+.judul{
+    font-size: 2rem;
+    margin-top: 50%;
+    transition: .5s ease-in-out;
+    font-family: 'Ubuntu';
+}
+.food-img{
+    width: 30%;
+
+}
+.kembali{
+    margin-top:0;
+}
+.bg-contain1{
+    background-color: #FF9200;
+}
+.bg-contain2{
+    background-color: #fffa01;
+}

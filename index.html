@@ -5,6 +5,10 @@
     <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic%20SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto%20Sans" rel="stylesheet">
+    <!--  -->
     <!--Linked CSS-->
     <link rel="stylesheet" href="asset/css/materialize.min.css">
     <link rel="stylesheet" href="asset/css/animate.css">
@@ -20,7 +24,9 @@
     <meta content='ALEXA-META-TAG' name='alexaVerifyID'/>
     <!--Title and Icon-->
     <title>Nuty.ID</title>
-    
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/all.min.css">
+    <link rel="shortcut icon" href="asset/img/favicon.ico" type="image/x-icon">
     <!--Additional CSS (for Developing only)-->
   </head>
   <body>
@@ -31,10 +37,10 @@
           <div class="container">
             <div class="nav-wrapper">
               <a href="#" class="brand-logo">
-                <img src="asset/img/logoo.svg" alt="">
+                <img src="asset/img/nuty.svg" alt="">
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a onclick="movePage(1)" >Home</a></li>
+                <li><a onclick="movePage(1)" ><i class="material-icons">home</i></a></li>
                 <li><a onclick="movePage(2)" >Product</a></li>
                 <li><a onclick="movePage(3)" >Contact</a></li>
               </ul>
@@ -94,209 +100,35 @@
 
         <!-- MAIN -->
         <div class="section nuty-color">
-          <div class="row container">
-            <div class="col s6 m4 modal-trigger pointer" onclick="noMove()"  href="#modal1" >
-              <img src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg" alt="">
-              <!-- PRODUCT -->
-              <p>Balinese Chicken With Mixed Vegetables</p>
+          <div class="container product">
+            <div id="food" class="product-contain bg-contain1" onclick="openFood()">
+              <h1 class="judul">Pakanan</h1>
+              <!-- <img class="food-img" src="asset/img/mask2.jpg" alt=""> -->
+              <i class="material-icons-round medium center">bento</i>
             </div>
-            <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal2">
-              <img src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg" alt="">
-              <!-- PRODUCT -->
-              <p>NAMA PRODUK</p>
+            <div id="beverage" class="product-contain bg-contain2" onclick="openBvg()">
+              <h1 class="judul right-align">Wedang</h1>
+              <i class="material-icons-round medium center">local_drink</i>
             </div>
-            <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal3">
-              <img src="asset/img/imacw.jpg" alt="">
-              <!-- PRODUCT -->
-              <p>NAMA PRODUK</p>
-            </div>
-            <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal4">
-              <img src="asset/img/imacw.jpg" alt="">
-              <!-- PRODUCT -->
-              <p>NAMA PRODUK</p>
-            </div>
-            <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal5">
-              <img src="asset/img/imacw.jpg" alt="">
-              <!-- PRODUCT -->
-              <p>NAMA PRODUK</p>
-            </div>
-            <div class="col s6 m4 modal-trigger pointer" onclick="noMove()" href="#modal6">
-              <img src="asset/img/imacw.jpg" alt="">
-              <!-- PRODUCT -->
-              <p>NAMA PRODUK</p>
-            </div>
-
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal modal-fixed-footer">
-              <div class="right p1">
-                <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
-              </div>
-              <div class="modal-content">
-                <div class="row">
-                  <div class="col s12 m6 foto_produk">
-                    <img class="responsive-img" src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg" alt="">
-                  </div>
-                  <div class="col s12 m6 des_produk left-align">
-                    <div class="plank">
-                      <h4>Balinese Chicken with Mixed Vegetables</h4>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
-                      <p>Loss Weight = 25000</p>
-                      <p>Maintain = 30000</p>
-                      <p>Gain = 35000</p>
-                    </div>
-                  </div>  
-                </div>
-              </div>
-              <div class="modal-footer black">
-              </div>
-            </div>
-                
-            <div id="modal2" class="modal modal-fixed-footer">
-              <div class="right p1">
-                <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
-              </div>
-              <div class="modal-content">
-                <div class="row">
-                  <div class="col s12 m6 foto_produk">
-                    <img class="responsive-img" src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg" alt="">
-                  </div>
-                  <div class="col s12 m6 des_produk left-align">
-                    <div class="plank">
-                      <h4>Balinese Grilled Chicken with Broccoli</h4>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
-                      <p>Loss Weight = 22000</p>
-                      <p>Maintain = 30000</p>
-                      <p>Gain = 35000</p>
-                    </div>
-                  </div>  
-                </div>
-              </div>
-              <div class="modal-footer black">
-              </div>
-            </div>
-
-            <div id="modal3" class="modal modal-fixed-footer">
-              <div class="right p1">
-                <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
-              </div>
-              <div class="modal-content">
-                <div class="row">
-                  <div class="col s12 m6 foto_produk">
-                    <img class="responsive-img" src="asset/img/FOTOMENUPILIHAN/chicken teriyaki.JPG" alt="">
-                  </div>
-                  <div class="col s12 m6 des_produk left-align">
-                    <div class="plank">
-                      <h4>Chicken Teriyaki</h4>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
-                      <p>HARGA 1 = 24000</p>
-                      <p>HARGA 2 = 27000</p>
-                      <p>HARGA 3 = 32000</p>
-                    </div>
-                  </div>  
-                </div>
-              </div>
-              <div class="modal-footer black">
-              </div>
-            </div>
-
-            <div id="modal4" class="modal modal-fixed-footer">
-              <div class="right p1">
-                <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
-              </div>
-              <div class="modal-content">
-                <div class="row">
-                  <div class="col s12 m6 foto_produk">
-                    <img class="responsive-img" src="asset/img/imacb.jpg" alt="">
-                  </div>
-                  <div class="col s12 m6 des_produk left-align">
-                    <div class="plank">
-                      <h4>JUDUL</h4>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
-                      <p>HARGA 1</p>
-                      <p>HARGA 2</p>
-                      <p>HARGA 3</p>
-                    </div>
-                  </div>  
-                </div>
-              </div>
-              <div class="modal-footer black">
-              </div>  
-            </div>
-
-            <div id="modal5" class="modal modal-fixed-footer">
-              <div class="right p1">
-                <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
-              </div>
-              <div class="modal-content">
-                <div class="row">
-                  <div class="col s12 m6 foto_produk">
-                    <img class="responsive-img" src="asset/img/imacb.jpg" alt="">
-                  </div>
-                  <div class="col s12 m6 des_produk left-align">
-                    <div class="plank">
-                      <h4>JUDUL</h4>
-                      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
-                      <p>HARGA 1</p>
-                      <p>HARGA 2</p>
-                      <p>HARGA 3</p>
-                    </div>
-                  </div>  
-                </div>
-              </div>
-              <div class="modal-footer black">
-              </div>
-            </div>
-
-            <div id="modal6" class="modal modal-fixed-footer">
-              <div class="right p1">
-                <a class="waves-effect waves-teal btn-flat modal-close" onclick="allowMove()"><i class="material-icons">close</i></a>
-              </div>
-              <div class="modal-content">
-                <div class="row">
-                  <div class="col s12 m6 foto_produk">
-                    <img class="responsive-img" src="asset/img/imacb.jpg" alt="">
-                  </div>
-                  <div class="col s12 m6 des_produk left-align">
-                    <div class="plank">
-                      <h4>JUDUL</h4>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, in sit. Sit, rerum sint hic impedit aperiam mollitia, laborum accusamus non quasi aliquam nobis tenetur! Eligendi ipsum obcaecati alias dolores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quam eos distinctio, dolor quae ad porro nam perferendis assumenda eaque sequi, ipsum hic est? Debitis illum explicabo voluptatem autem! Atque?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui dolore non? Quis et quod minima. In soluta accusamus, maxime, cupiditate quibusdam nesciunt nobis rerum autem asperiores officia ab dolore!</p>
-                    <p>HARGA 1</p>
-                    <p>HARGA 2</p>
-                    <p>HARGA 3</p>
-                    </div>
-                  </div>  
-                </div>
-              </div>
-              <div class="modal-footer black">
-              </div>
-            </div>  
-          </div>                  
-        </div>
+          </div>
+        </div> 
         <!-- FOOTER WANNA BE -->
-        <div class="section black">
+        <div class="section nuty-color">
           <div class="container">
             <div class="row">
               <div class="col s12">
-                <div class="center white-text">
+                <div class="center lower">
                   <h3>Contact Us</h3>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias quisquam eaque iusto labore nisi sed sequi dolorem ut corporis ipsam commodi provident eos ad tempora, sunt odio, in numquam!</p>
+                  <p></p>
                 </div>
               </div>
               <div class="col s12">
                 <div class="row">
                   <div class="col m6 s12 media-contact">
-                    <div>
-                      <a class="btn-floating btn-large waves-effect waves-light nuty-color"><i class="material-icons">add</i>@nuty.id</a>
-                    </div>
+                    <h5 class="socmed"><i class="fab fa-instagram"></i> @nuty.id</h5>
                   </div>
                   <div class="col m6 s12">
-                
+                    <h5 class="socmed"><i class="fab fa-whatsapp"></i> +62 895-1321-8842</h5>
                   </div>
                 </div>
               </div>

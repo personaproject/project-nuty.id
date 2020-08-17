@@ -21,6 +21,8 @@ function autoplay(){
     M.Carousel.getInstance(carousel).next();
     setTimeout(autoplay, 4500);
 }
+var collap = document.querySelectorAll('.collapsible');
+var collapIns = M.Collapsible.init(collap, {});
   });
   function noMove(){
     $.fn.pagepiling.setMouseWheelScrolling(false);
@@ -75,3 +77,65 @@ function scrollFunction(){
         navbar.classList.remove("black-nav");
         }
 }
+
+//script product
+function openFood(){
+    let idsOpen= document.getElementById("food");
+    let idsClose = document.getElementById("beverage");
+    idsOpen.style.width = "90%";
+    idsOpen.style.display = "inline"
+    idsOpen.children[0].style.writingMode = "unset"
+    idsOpen.children[0].style.textOrientation = "unset"
+    idsOpen.children[0].style.fontSize = "2rem"
+    idsOpen.children[1].style.display = "none";
+    idsOpen.children[0].classList.add("kembali");
+    idsOpen.onclick = backTo;
+    idsClose.onclick = openBvg;
+    idsClose.style.width = "10%";
+    idsClose.style.display="grid";
+    idsClose.children[0].style.writingMode = "vertical-rl"
+    idsClose.children[0].style.textOrientation = "upright"
+    idsClose.children[0].style.fontSize = "1.6rem"
+    idsClose.children[1].style.display = "block";
+
+  }
+  function openBvg(){
+    let idsOpen= document.getElementById("beverage");
+    let idsClose = document.getElementById("food");
+    idsOpen.style.width = "90%";
+    idsOpen.style.display = "inline"
+    idsOpen.children[0].style.writingMode = "unset"
+    idsOpen.children[0].style.textOrientation = "unset"
+    idsOpen.children[0].style.fontSize = "2rem"
+    idsOpen.children[1].style.display = "none";
+    idsOpen.children[0].classList.add("kembali");
+    idsOpen.onclick = backTo;
+    idsClose.onclick = openFood;
+    idsClose.style.display="grid";
+    idsClose.style.width = "10%";
+    idsClose.children[0].style.writingMode = "vertical-rl"
+    idsClose.children[0].style.textOrientation = "upright"
+    idsClose.children[0].style.fontSize = "1.6rem"
+    idsClose.children[1].style.display = "block";
+
+  }
+  function backTo(){
+    let idsOpen= document.getElementById("food");
+    let idsClose = document.getElementById("beverage");
+    idsOpen.style.width="50%"
+    idsOpen.onclick = openFood;
+    idsClose.onclick = openBvg;
+    idsClose.style.width="50%"
+    idsOpen.children[0].style.writingMode = "unset"
+    idsOpen.children[0].style.textOrientation = "unset"
+    idsOpen.children[1].style.display = "block";
+    idsOpen.children[0].classList.remove("kembali");
+    idsOpen.children[0].style.fontSize = "1.6rem"
+    idsOpen.style.display = "grid"
+    idsClose.children[0].style.writingMode = "unset"
+    idsClose.children[0].style.textOrientation = "unset"
+    idsClose.children[1].style.display = "block";
+    idsClose.children[0].classList.remove("kembali");
+    idsClose.style.display = "grid"
+    idsClose.children[0].style.fontSize = "1.6rem"
+  }
