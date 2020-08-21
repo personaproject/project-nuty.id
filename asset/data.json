@@ -1,0 +1,27 @@
+{
+        "title"     : "Ballinese Grilled Chicken with Mixed Vegetables",
+        "product" : {
+          "loss" :{
+              "price" : 25,
+              "cal"  :344.6,
+              "fat" :11,
+              "carbo":27.6,
+              "pro":33.5 
+          },
+          "main" :{
+            "price" : 30,
+            "cal"  :459.9,
+            "fat" :15.5,
+            "carbo":30.3,
+            "pro":49.3 
+        },
+          "gain" :{
+            "price" : 35,
+            "cal"  :639,
+            "fat" :20.2,
+            "carbo":47,
+            "pro":66.5 
+        }
+        },
+        "description" : "Ayam panggang bercampur sambal matah dipadukan dengan tumis wortel dan buncis serta nasi"
+}

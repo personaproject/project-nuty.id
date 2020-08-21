@@ -194,3 +194,30 @@ Design
 .bg-contain2{
     background-color: #fffa01;
 }
+.display-menu{
+    height: 100vh;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+.container.w90{
+    width: 90%;
+}
+.card-panel.h65{
+    height: calc(65vh - 5vw);
+}
+.card-panel.h25{
+    height: calc(25vh - 2.5vw);
+}
+.card-panel.h253{
+    height: calc(25vh - 3vw);
+}
+
+.card-panel.h254{
+    height: calc(25vh - 3.5vw);
+}
+.splide__slide{
+    cursor: pointer;
+}
+.rounded{
+    border-radius: 18px;
+}

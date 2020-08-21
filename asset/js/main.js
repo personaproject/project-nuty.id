@@ -16,11 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         endingTop: "unset",
     });
     autoplay();
-function autoplay(){
-    let carousel = document.querySelector('.carousel.carousel-slider');
-    M.Carousel.getInstance(carousel).next();
-    setTimeout(autoplay, 4500);
-}
+
 var collap = document.querySelectorAll('.collapsible');
 var collapIns = M.Collapsible.init(collap, {});
   });
@@ -139,3 +135,11 @@ function openFood(){
     idsClose.style.display = "grid"
     idsClose.children[0].style.fontSize = "1.6rem"
   }
+function nextCrs(){
+  let crsInit = M.Carousel.getInstance(document.querySelector(".carousel.carousel-slider"));
+  crsInit.next();
+}
+function autoplay(x){
+  let crsInit = M.Carousel.getInstance(document.querySelector(".carousel.carousel-slider"));
+  setTimeout(autoplay, x);
+}

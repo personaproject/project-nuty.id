@@ -8,9 +8,9 @@
       <!--  -->
       <!--Linked CSS-->
     <link rel="stylesheet" href="asset/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="asset/css/animate.css">
     <link rel="stylesheet" href="asset/css/main.css">
-    <link rel="stylesheet" href="asset/css/jquery.pagepiling.css">
     <!--SEO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,85 +30,158 @@
     </header>
     
     <main>
-        <div class="container product">
-            <div id="food" class="product-contain bg-contain1" onclick="openFood()">
-              <h1 class="judul">Pakanan</h1>
-              <!-- <img class="food-img" src="asset/img/mask2.jpg" alt=""> -->
-              <i class="material-icons-round medium center">bento</i>
+        <div class="display-menu" >
+          <div class="container w90">
+            <div class="row">
+              <div class="col s5">
+                <div class="card-panel teal h25" >
+                  <h5 class="center" id="judul">Ballinese Grilled Chicken with Mixed Vegetables</h5>
+                </div>
+                  <div id="primary-slider"class="splide card-panel teal h65">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Beef_blackpepper.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/beef_teriyaki.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/chicken_teriyaki.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Greentea_banana_smoothies.jpg">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              <div class="col s5">
+                <div class="card-panel teal h65" >
+                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nisi eligendi consequuntur earum dolores, quidem eos asperiores dolore ipsa, ducimus excepturi nulla hic quae molestias autem! Quae omnis possimus nobis!</span>
+                </div>
+                <div class="row">
+                  <div class="col s4">
+                    <div class="card-panel teal h253 rounded">
+                      <h3 class="center" id="loss"></h3>
+                    </div>
+                  </div>
+                  <div class="col s4">
+                    <div class="card-panel teal h253 rounded">
+                      <h3 class="center" id="maintain"></h3>
+                    </div>
+                  </div>
+                  <div class="col s4">
+                    <div class="card-panel teal h253 rounded">
+                      <h3 class="center" id="gain"></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s2">
+                <div id="secondary-slider" class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="asset/img/menu/Beef_blackpepper.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="asset/img/menu/beef_teriyaki.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="asset/img/menu/chicken_teriyaki.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="asset/img/menu/Greentea_banana_smoothies.jpg">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="beverage" class="product-contain bg-contain2" onclick="openBvg()">
-              <h1 class="judul right-align">Wedang</h1>
-              <i class="material-icons-round medium center">local_drink</i>
-            </div>
+          </div>
+        </div>
+        <div class="display-menu">
+          <div class="container">
+            
+          </div>
         </div>
     </main>
     <footer></footer>
 
 
     <script src="asset/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    var collap = document.querySelectorAll('.collapsible');
-    var collapIns = M.Collapsible.init(collap, {});
-  });
-  function openFood(){
-    let idsOpen= document.getElementById("food");
-    let idsClose = document.getElementById("beverage");
-    idsOpen.style.width = "90%";
-    idsOpen.style.display = "inline"
-    idsOpen.children[0].style.writingMode = "unset"
-    idsOpen.children[0].style.textOrientation = "unset"
-    idsOpen.children[0].style.fontSize = "1.6rem"
-    idsOpen.children[1].style.display = "none";
-    idsOpen.children[0].classList.add("kembali");
-    idsOpen.onclick = backTo;
-    idsClose.onclick = openBvg;
-    idsClose.style.width = "10%";
-    idsClose.style.display="grid";
-    idsClose.children[0].style.writingMode = "vertical-rl"
-    idsClose.children[0].style.textOrientation = "upright"
-    idsClose.children[0].style.fontSize = "2rem"
-    idsClose.children[1].style.display = "block";
-
-  }
-  function openBvg(){
-    let idsOpen= document.getElementById("beverage");
-    let idsClose = document.getElementById("food");
-    idsOpen.style.width = "90%";
-    idsOpen.style.display = "inline"
-    idsOpen.children[0].style.writingMode = "unset"
-    idsOpen.children[0].style.textOrientation = "unset"
-    idsOpen.children[0].style.fontSize = "1.6rem"
-    idsOpen.children[1].style.display = "none";
-    idsOpen.children[0].classList.add("kembali");
-    idsOpen.onclick = backTo;
-    idsClose.onclick = openFood;
-    idsClose.style.display="grid";
-    idsClose.style.width = "10%";
-    idsClose.children[0].style.writingMode = "vertical-rl"
-    idsClose.children[0].style.textOrientation = "upright"
-    idsClose.children[0].style.fontSize = "2rem"
-    idsClose.children[1].style.display = "block";
-
-  }
-  function backTo(){
-    let idsOpen= document.getElementById("food");
-    let idsClose = document.getElementById("beverage");
-    idsOpen.style.width="50%"
-    idsOpen.onclick = openFood;
-    idsClose.onclick = openBvg;
-    idsClose.style.width="50%"
-    idsOpen.children[0].style.writingMode = "unset"
-    idsOpen.children[0].style.textOrientation = "unset"
-    idsOpen.children[1].style.display = "block";
-    idsOpen.children[0].classList.remove("kembali");
-    idsOpen.style.display = "grid"
-    idsClose.children[0].style.writingMode = "unset"
-    idsClose.children[0].style.textOrientation = "unset"
-    idsClose.children[1].style.display = "block";
-    idsClose.children[0].classList.remove("kembali");
-    idsClose.style.display = "grid"
-  }
+      document.addEventListener( 'DOMContentLoaded', function () {
+	var secondarySlider = new Splide( '#secondary-slider', {
+    type : "loop",
+    height      : "80vh",
+    gap         : 10,
+    perPage     :4,
+		isNavigation: true,
+		rewind     : true,
+	cover      : true,
+	pagination : false,
+	focus      : 'center',
+		breakpoints : {
+			'600': {
+				fixedWidth: 66,
+				height    : 40,
+			}
+    },
+    direction : 'ttb',
+  } ).mount();
+  var primarySlider = new Splide( '#primary-slider', {
+		type       : 'fade',
+		heightRatio: .75,
+		pagination : false,
+		arrows     : false,
+		cover      : true,
+	} ); // do not call mount() here.
+	
+  primarySlider.sync( secondarySlider ).mount();
+  var jud = [
+    "Ballinese Grilled Chicken with Mixed Vegetables", 
+    "Ballinese Grilled Chicken with Broccoli", 
+    "Beef Black Pepper", 
+    "Beef Teriyaki", 
+    "Chicken Teriyaki Mixed Vegetables", 
+    "Greentea Banana Smoothiesf"
+  ]
+  var price =[
+    [25, 30, 35],
+    [22, 30, 35],
+    [0,0,0],
+    [0,0,0],
+    [24, 27, 32],
+    [15,0,0]
+  ]
+  secondarySlider.on("move", e=>{
+    let html = document.getElementById("judul")
+    let loss = document.getElementById("loss")
+    let maintain = document.getElementById("maintain")
+    let gain = document.getElementById("gain")
+    html.innerHTML = jud[e];
+    loss.innerHTML = price[e][0]
+    maintain.innerHTML = price[e][1]
+    gain.innerHTML = price[e][2]
+  })
+} )
+fetch("/asset/data.json").then(e=>e.json()).then(data => console.log(data))
     </script>
 
   </body>
