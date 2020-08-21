@@ -287,8 +287,28 @@ Design
 .fnt h3{
     font-weight: bolder;
 }
+
+/*Splideee*/
 .splide--nav > .splide__track > .splide__list > .splide__slide.is-active{
     border-color: rgb(124, 178, 67);
+}
+.splide__arrow{
+    height: 2.5em;
+    opacity: .9;
+    border-radius: 0;
+    width: 100%;
+}
+.splide--ttb > .splide__arrows .splide__arrow--next, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--next{
+    bottom: 0;
+}
+.splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev{
+    top: 0;
+}
+.splide--ttb > .splide__arrows .splide__arrow--next, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--next:focus{
+    background: rgb(124, 178, 67);
+}
+.splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev:focus{
+    background: rgb(124, 178, 67);
 }
 /* https://www.freepik.com/free-vector/graphic-design-geometric-wallpaper_7088577.htm#page=2&query=abstract+background&position=33 */
 /* https://www.freepik.com/free-vector/abstract-pastel-background_9058958.htm#page=2&query=abstract+background&position=49 */

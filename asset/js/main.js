@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var collap = document.querySelectorAll('.collapsible');
 var collapIns = M.Collapsible.init(collap, {});
-
+var par = document.getElementById("parentes").offsetHeight;
 //Product display
 var secondarySlider = new Splide( '#secondary-slider', {
   type : "loop",
-  height      : "80vh",
+  height      : par ,
   gap         : 10,
   perPage     :4,
   isNavigation: true,
@@ -73,6 +73,22 @@ var jud = [
   "Shrimp with Oyster Sauce Mixed Vegetables",
   "Roasted Chicken with Broccoli"
 ]
+var desc = [
+  "Ayam panggang bercampur sambal matah dipadukan dengan tumis wortel dan buncis serta nasi",
+  "Ayam panggang bercampur sambal matah dipadukan dengan brokoli rebus sebagai sumber serat dan nasi yang merupakan karbohidrat",
+  "Daging sapi yang dimasak dengan lada hitam sebagai sumber protein dipadukan dengan sayuran rebus dan nasi",
+  "Daging sapi yang dimasak dengan saus manis khas jepang dipadukan dengan sayuran segar dan kentang",
+  "Ayam yang dimasak dengan saus manis khas jepang dipadukan dengan tumis wortel dan buncis serta kentang",
+  "minuman kaya protein dan mengenyangkan yang dibuat dari pisang dan susu ditambah greentea untuk memperkaya rasa",
+  "minuman kaya protein dan mengenyangkan yang dibuat dari pisang dan susu ditambah oatmeal untuk memperkaya rasa",
+  "Kue dadar yang dibuat dari pisang, telur, oatmeal, dan susu dengan tambahan potongan pisang dan madu diatasnya",
+  "Ayam ungkep yang dipanggang sebagai sumber protein dipasukan dengan capcay yang merupakan sumber serat dan nasi sebagai sumber karbohidratnya",
+  "Sate ayam yang dibakar tanpa baluran bumbu dan kecap namun disajikan dengan sambal dan parutan jeruk nipis dipadukan dengan sayuran rebus dan nasi",
+  "Tempe orek bercampur sayuran dan dipadukan dengan nasi",
+  "Tempe orek yang dipasukan dengan capcay sebagai sumber serat dan nasi",
+  "Udang yang dimasak dengan saus tiram dipadukan dengan tumis worten dan buncis serta nasi sebagi sumber karbohidratnya",
+  "Ayam ungkep yang dipanggang sebagai sumber protein dipadukan dengan brokoli rebus sebagai sumber serat dan kentang yang merupakan sumber karbohidrat"
+]
 var price =[
   ["25K", "30K", "35K"],
   ["22K", "30K", "35K"],
@@ -94,10 +110,12 @@ secondarySlider.on("move", e=>{
   let loss = document.getElementById("loss")
   let maintain = document.getElementById("maintain")
   let gain = document.getElementById("gain")
+  let descHtml = document.getElementById("desc")
+  descHtml.innerHTML = desc[e];
   html.innerHTML = jud[e];
-  loss.innerHTML = price[e][0]
-  maintain.innerHTML = price[e][1]
-  gain.innerHTML = price[e][2]
+  loss.innerHTML = price[e][0];
+  maintain.innerHTML = price[e][1];
+  gain.innerHTML = price[e][2];
 })
   });
   function noMove(){
