@@ -8,12 +8,27 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic%20SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto%20Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto%20Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto%20Slab" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%20Dots" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin%20Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair%20Display" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gesalio" rel="stylesheet">
+    
     <!--  -->
     <!--Linked CSS-->
     <link rel="stylesheet" href="asset/css/materialize.min.css">
     <link rel="stylesheet" href="asset/css/animate.css">
-    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="asset/css/jquery.pagepiling.css">
+    <link rel="stylesheet" href="asset/css/main.css">
+    
     <!--SEO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,10 +76,9 @@
               <h3 class="slogan">
                 Stay Healthy with Nuty
               </h3>
-              <h5 class="white-text">Healthy and Delicious Food</h5>
-              <i class="material-icons right red btn" onclick="nextCrs()">arrow_forward</i>
+              <h5 class="slogan-b">Healthy and Delicious Food</h5>
             </div>
-            <div class="carousel-item red" style="background-image: url(asset/img/menu/Beef_blackpepper.jpg);" href="#one!">
+            <div class="carousel-item nuty-color" style="background-image: url(asset/img/menu/Beef_blackpepper.jpg);" href="#one!">
               <div class="bg-change">
                 <div class="dalam noselect"><div class="white-text">
                   <p class="name-product">beef blackpepper</p>
@@ -72,7 +86,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item yellow" style="background-image: url(asset/img/menu/beef_teriyaki.jpg);" href="#two!">
+            <div class="carousel-item nuty-color" style="background-image: url(asset/img/menu/beef_teriyaki.jpg);" href="#two!">
               <div class="bg-change">
                 <div class="dalam noselect"><div class="white-text">
                   <p class="name-product">beef teriyaki</p>
@@ -80,7 +94,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item green" style="background-image: url(asset/img/menu/Pancake.jpg);" href="#three!">
+            <div class="carousel-item nuty-color" style="background-image: url(asset/img/menu/Pancake.jpg);" href="#three!">
               <div class="bg-change">
                 <div class="dalam noselect"><div class="white-text">
                   <p class="name-product">Pancake</p>
@@ -88,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item blue" style="background-image: url(asset/img/menu/Greentea_banana_smoothies.jpg);" href="#four!">
+            <div class="carousel-item nuty-color" style="background-image: url(asset/img/menu/Greentea_banana_smoothies.jpg);" href="#four!">
               <div class="bg-change">
                 <div class="dalam noselect"><div class="white-text">
                   <p class="name-product">Greentea banana smoothies</p>
@@ -101,15 +115,135 @@
 
         <!-- MAIN -->
         <div class="section nuty-color">
-          <div class="container product">
-            <div id="food" class="product-contain bg-contain1" onclick="openFood()">
-              <h1 class="judul">Pakanan</h1>
-              <!-- <img class="food-img" src="asset/img/mask2.jpg" alt=""> -->
-              <i class="material-icons-round medium center">bento</i>
-            </div>
-            <div id="beverage" class="product-contain bg-contain2" onclick="openBvg()">
-              <h1 class="judul right-align">Wedang</h1>
-              <i class="material-icons-round medium center">local_drink</i>
+          <div class="display-menu" >
+            <div class="container w90">
+              <div class="row">
+                <div class="col s5">
+                  <div class="card-panel no-shadow h25 rounded pnl-1" >
+                    <h5 class="center" id="judul">Ballinese Grilled Chicken with Mixed Vegetables</h5>
+                  </div>
+                    <div id="primary-slider"class="splide card-panel h65 rounded pnl-2" style="background-image: url(asset/img/3509904cokalsk.jpg);">
+                      <div class="splide__track rounded">
+                        <ul class="splide__list">
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Beef_blackpepper.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/beef_teriyaki.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/chicken_teriyaki.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Greentea_banana_smoothies.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Oatmeal_banana_smoothies.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Pancake.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/Roasted_chicken_with_capcay.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/satai_taichan.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/sesame_tempe_mixed_vegetables.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/sesame_tempe_with_capcay.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/shrimp_with_oyster_sauce.jpg">
+                          </li>
+                          <li class="splide__slide">
+                            <img src="asset/img/menu/sted_chicken_with_broccoli.jpg">
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                <div class="col s5">
+                  <div class="card-panel h65 rounded pnl-3 "  style="background-image: url(asset/img/3509904cokalsk.jpg)" >
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nisi eligendi consequuntur earum dolores, quidem eos asperiores dolore ipsa, ducimus excepturi nulla hic quae molestias autem! Quae omnis possimus nobis!</p>
+                  </div>
+                  <div class="row">
+                    <div class="col s4">
+                      <div class="card-panel h253 rounded pnl-4 fnt">
+                        <h3 class="center" id="loss">25K</h3>
+                      </div>
+                    </div>
+                    <div class="col s4">
+                      <div class="card-panel h253 rounded pnl-5 fnt">
+                        <h3 class="center" id="maintain">30K</h3>
+                      </div>
+                    </div>
+                    <div class="col s4">
+                      <div class="card-panel h253 rounded pnl-6 fnt">
+                        <h3 class="center" id="gain">35K</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2">
+                  <div id="secondary-slider" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Beef_blackpepper.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/beef_teriyaki.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/chicken_teriyaki.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Greentea_banana_smoothies.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Oatmeal_banana_smoothies.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Pancake.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/Roasted_chicken_with_capcay.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/satai_taichan.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/sesame_tempe_mixed_vegetables.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/sesame_tempe_with_capcay.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/shrimp_with_oyster_sauce.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="asset/img/menu/sted_chicken_with_broccoli.jpg">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div> 
@@ -126,7 +260,7 @@
               <div class="col s12">
                 <div class="row">
                   <div class="col m6 s12 media-contact">
-                    <h5 class="socmed"><i class="fab fa-instagram"></i> @nuty.id</h5>
+                    <h5 class="socmed"><i class="fab fa-instagram"></i> nuty.id</h5>
                   </div>
                   <div class="col m6 s12">
                     <h5 class="socmed"><i class="fab fa-whatsapp"></i> +62 895-1321-8842</h5>
@@ -143,6 +277,7 @@
     <script src="asset/js/jquery-3.5.1.min.js"></script>
     <script src="asset/js/jquery.pagepiling.js"></script>
     <script src="asset/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="asset/js/main.js"></script>
 
   </body>

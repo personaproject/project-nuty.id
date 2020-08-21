@@ -39,25 +39,27 @@
 .carousel.carousel-slider .carousel-item .name-product{
     margin-bottom: 0;
     text-transform: uppercase;
-    font-family: 'Didact Gothic';
+    font-family: 'Josefin Sans';
     font-weight: bold;
     line-height: 0.3;
 }
 .carousel.carousel-slider .carousel-item .des-product{
-    font-family: 'Noto Sans';
+    font-family: 'Inter';
     /* font-weight: bolder; */
     font-size: smaller;
 }
 nav{
     /* background-color: #fffa01; */
-    background-color: #FFCB01;
+    background-color: transparent;
+    box-shadow: none;
+    transition: .5s ease-in-out;
     
 }
 .section{
     padding: 0;
 }
 .carousel.carousel-slider .carousel-fixed-item{
-    top:20%;
+    /* top:20%; */
     bottom: unset;
 }
 .indicator-item.active{
@@ -68,13 +70,17 @@ nav{
     margin-left: 50vw;
     transform: translate(-50%) ;
     /* font-family: 'Dekko'; */
-    font-family: 'Didact Gothic';
+    font-family: 'Rubik';
     color: #FFE264;
 }
-
+.slogan-b{
+    font-family: 'Gelasio';
+    color: #FFFEC8;;
+}
 
 #nav-mobile{
-    font-family: 'Dekko';
+    font-family: 'Inter';
+    
 }
 #nav-mobile li:hover{
     background-color: #FF9200;
@@ -82,7 +88,7 @@ nav{
     /* border-spacing: 10px; */
 }
 #nav-mobile li a{
-    font-size: 20px;
+    font-size: 1rem;
     color: #FFFEC8;
     
 }
@@ -198,20 +204,43 @@ Design
     height: 100vh;
     padding-top: 5vw;
     padding-bottom: 5vw;
+    
 }
 .container.w90{
     width: 90%;
 }
+.card-panel.no-shadow{
+    box-shadow: none;
+}
 .card-panel.h65{
     height: calc(65vh - 5vw);
 }
+.row .card-panel.h65 p{
+    font-size: x-large;
+    text-align: left;
+}
 .card-panel.h25{
     height: calc(25vh - 2.5vw);
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+.card-panel.h25 h5{
+    font-size: 35px;
+    margin: 0;
+    /* font-weight: bold; */
+    /* letter-spacing: .8px; */
 }
 .card-panel.h253{
     height: calc(25vh - 3vw);
+    display: flex;
+    place-content: center;
+    place-items: center;
 }
+.card-panel.h253 h3{
+    margin: 0;
 
+}
 .card-panel.h254{
     height: calc(25vh - 3.5vw);
 }
@@ -221,3 +250,45 @@ Design
 .rounded{
     border-radius: 18px;
 }
+.pnl-1{
+    /* background-color: rgb(240, 248, 79); */
+    background-color: #FFFEC8;
+    color: #1F1809 ;
+    font-family: 'Ubuntu';
+    
+    
+}
+.pnl-2{
+    
+    background-size: cover;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #FFFEC8;
+}
+.pnl-3{
+    background-color: rgb(209, 209, 209) ;
+    background-size: cover;
+    font-family: 'Didact Gothic';
+}
+.pnl-4{
+    background-color: rgb(223, 152, 0);
+    /* color: #1F1809 ; */
+    color: #FFFEC8;
+}
+.pnl-5{
+    background-color: rgb(124, 178, 67) ;
+    /* color: #1F1809 ; */
+    color: #FFFEC8;
+}
+.pnl-6{
+    background-color: rgb(204, 214, 16);
+    /* color: #1F1809 ; */
+    color: #FFFEC8;
+}
+.fnt h3{
+    font-weight: bolder;
+}
+.splide--nav > .splide__track > .splide__list > .splide__slide.is-active{
+    border-color: rgb(124, 178, 67);
+}
+/* https://www.freepik.com/free-vector/graphic-design-geometric-wallpaper_7088577.htm#page=2&query=abstract+background&position=33 */
+/* https://www.freepik.com/free-vector/abstract-pastel-background_9058958.htm#page=2&query=abstract+background&position=49 */
