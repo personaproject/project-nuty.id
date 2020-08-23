@@ -1,4 +1,5 @@
 /* TOOLS*/
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -13,12 +14,39 @@
 .nuty-color{
     background-color: #FFFEC8;
 }
+.bg-contain1{
+    background-color: #FF9200;
+}
+.bg-contain2{
+    background-color: #fffa01;
+}
 .bg-change{
     background-color: rgba(0, 0, 0, .25);
     height: 100%;
     width: 100%;
 }
+.p1{
+    padding: 1rem;
+}
+.container.w90{
+    width: 90%;
+}
+.rounded{
+    border-radius: 18px;
+}
+.h100{
+    min-height: 100vh;
+}
+.section{
+    scroll-snap-align: start;
+    
 
+}
+.mid{
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
 /* SECTION UP */
 .carousel{
     height: 100vh;
@@ -30,7 +58,6 @@
     background-size: cover;
     background-position: center center;
 }
-
 .carousel-item .dalam{
     position: fixed;
     bottom: 20px;
@@ -45,11 +72,9 @@
 }
 .carousel.carousel-slider .carousel-item .des-product{
     font-family: 'Inter';
-    /* font-weight: bolder; */
     font-size: smaller;
 }
 nav{
-    /* background-color: #fffa01; */
     background-color: transparent;
     box-shadow: none;
     transition: .5s ease-in-out;
@@ -59,7 +84,6 @@ nav{
     padding: 0;
 }
 .carousel.carousel-slider .carousel-fixed-item{
-    /* top:20%; */
     bottom: unset;
 }
 .indicator-item.active{
@@ -69,7 +93,6 @@ nav{
     margin-bottom: 0;
     margin-left: 50vw;
     transform: translate(-50%) ;
-    /* font-family: 'Dekko'; */
     font-family: 'Rubik';
     color: #FFE264;
 }
@@ -84,16 +107,11 @@ nav{
 }
 #nav-mobile li:hover{
     background-color: #FF9200;
-    /* border-radius: 0 0 30px 30px; */
-    /* border-spacing: 10px; */
 }
 #nav-mobile li a{
     font-size: 1rem;
     color: #FFFEC8;
     
-}
-#nav-mobile li a:hover{
-    /* color: #FFFEC8; */
 }
 /* SSECTION DOWN */
 .row{
@@ -113,12 +131,6 @@ nav{
 .modal{
     max-height: 80%;
     width: 70%;
-}
-.p1{
-    padding: 1rem;
-}
-.black-nav{
-    background-color: rgba(0, 0, 0, .4);
 }
 
 .foto_produk{
@@ -163,12 +175,11 @@ nav{
     color: #FF9200;
 }
 /*
-Design
+Product display
 */
 .product{
     display: flex;
     height: 100vh;
-    /* padding-top: 10vh; */
 }
 .product-contain{
     padding: 3%;
@@ -194,20 +205,12 @@ Design
 .kembali{
     margin-top:0;
 }
-.bg-contain1{
-    background-color: #FF9200;
-}
-.bg-contain2{
-    background-color: #fffa01;
-}
+
 .display-menu{
     height: 100vh;
     padding-top: 5vw;
     padding-bottom: 5vw;
     
-}
-.container.w90{
-    width: 90%;
 }
 .card-panel.no-shadow{
     box-shadow: none;
@@ -226,10 +229,8 @@ Design
     place-items: center;
 }
 .card-panel.h25 h5{
-    font-size: 35px;
+    font-size: 2em;
     margin: 0;
-    /* font-weight: bold; */
-    /* letter-spacing: .8px; */
 }
 .card-panel.h253{
     height: calc(25vh - 3vw);
@@ -244,24 +245,14 @@ Design
 .card-panel.h254{
     height: calc(25vh - 3.5vw);
 }
-.splide__slide{
-    cursor: pointer;
-}
-.rounded{
-    border-radius: 18px;
-}
+
 .pnl-1{
-    /* background-color: rgb(240, 248, 79); */
     background-color: #FFFEC8;
     color: #1F1809 ;
-    font-family: 'Ubuntu';
-    
-    
+    font-family: 'Ubuntu'; 
 }
 .pnl-2{
-    
     background-size: cover;
-    /* background-color: rgb(255, 255, 255); */
     background-color: #FFFEC8;
 }
 .pnl-3{
@@ -287,8 +278,13 @@ Design
 .fnt h3{
     font-weight: bolder;
 }
-
-/*Splideee*/
+.spd-c{
+    height: calc(100vh - 11.5vw);
+}
+/*Splide*/
+.splide__slide{
+    cursor: pointer;
+}
 .splide--nav > .splide__track > .splide__list > .splide__slide.is-active{
     border-color: rgb(124, 178, 67);
 }
@@ -296,7 +292,6 @@ Design
     height: 2.5em;
     opacity: .9;
     border-radius: 0;
-    width: 100%;
 }
 .splide--ttb > .splide__arrows .splide__arrow--next, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--next{
     bottom: 0;
@@ -310,5 +305,42 @@ Design
 .splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev:focus{
     background: rgb(124, 178, 67);
 }
-/* https://www.freepik.com/free-vector/graphic-design-geometric-wallpaper_7088577.htm#page=2&query=abstract+background&position=33 */
-/* https://www.freepik.com/free-vector/abstract-pastel-background_9058958.htm#page=2&query=abstract+background&position=49 */
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .carousel.carousel-slider .carousel-fixed-item.with-indicators{
+        bottom: 50vh;
+        transform: translateY(50%);
+    }
+    .slogan{
+        font-size: 2em;
+    }
+    .carousel.carousel-slider .carousel-item .name-product{
+        font-size: 1rem;
+    }
+    .carousel.carousel-slider .carousel-item .des-product{
+        font-size: .75rem;
+    }
+    .carousel-item .dalam{
+        bottom: 10vh;
+        left: 2rem;
+        width: 90%;
+    }
+    .card-panel.h25 h5{
+        font-size: 1.25em;
+    }
+    .card-panel.h25,.card-panel.h65,.card-panel.h253,.card-panel.h254, .h100, .display-menu, .spd-c{
+        height: unset;
+        min-height: 0;
+    }
+    .row .card-panel.h65 p{
+        font-size: 1.2em;
+    }
+    .card-panel{
+        padding:1rem;
+    }
+    .h100.khusus{
+        min-height: 100vh;
+    }
+  }

@@ -30,96 +30,13 @@
     </header>
     
     <main>
-        <div class="display-menu" >
-          <div class="container w90">
-            <div class="row">
-              <div class="col s5">
-                <div class="card-panel teal h25" >
-                  <h5 class="center" id="judul">Ballinese Grilled Chicken with Mixed Vegetables</h5>
-                </div>
-                  <div id="primary-slider"class="card-panel teal h65" style="background-size: cover;background-position: center center;">
-                    
-                  </div>
-                </div>
-              <div class="col s5">
-                <div class="card-panel teal h65" >
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nisi eligendi consequuntur earum dolores, quidem eos asperiores dolore ipsa, ducimus excepturi nulla hic quae molestias autem! Quae omnis possimus nobis!</span>
-                </div>
-                <div class="row">
-                  <div class="col s4">
-                    <div class="card-panel teal h253 rounded">
-                      <h3 class="center" id="loss"></h3>
-                    </div>
-                  </div>
-                  <div class="col s4">
-                    <div class="card-panel teal h253 rounded">
-                      <h3 class="center" id="maintain"></h3>
-                    </div>
-                  </div>
-                  <div class="col s4">
-                    <div class="card-panel teal h253 rounded">
-                      <h3 class="center" id="gain"></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col s2">
-                <div id="secondary-slider" class="splide">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Beef_blackpepper.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/beef_teriyaki.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/chicken_teriyaki.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Greentea_banana_smoothies.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Oatmeal_banana_smoothies.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Pancake.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/Roasted_chicken_with_capcay.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/satai_taichan.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/sesame_tempe_mixed_vegetables.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/sesame_tempe_with_capcay.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/shrimp_with_oyster_sauce.jpg">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="asset/img/menu/sted_chicken_with_broccoli.jpg">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="display-menu">
-          <div class="container">
-            
-          </div>
+        <div class="parents">
+          <div class="child red"></div>
+          <div class="child green"></div>
+          <div class="child blue"></div>
+          <div class="child red"></div>
+          <div class="child green"></div>
+          <div class="child blue"></div>
         </div>
     </main>
     <footer></footer>
@@ -129,91 +46,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
     <script>
-      document.addEventListener( 'DOMContentLoaded', function () {
-	var secondarySlider = new Splide( '#secondary-slider', {
-    type : "loop",
-    height      : "80vh",
-    gap         : 10,
-    perPage     :4,
-		isNavigation: true,
-		rewind     : true,
-	cover      : true,
-	pagination : false,
-	focus      : 'center',
-		breakpoints : {
-			'600': {
-				fixedWidth: 66,
-				height    : 40,
-			}
-    },
-    direction : 'ttb',
-  } ).mount();
-  
-  var jud = [
-    "Ballinese Grilled Chicken with Mixed Vegetables", 
-    "Ballinese Grilled Chicken with Broccoli", 
-    "Beef Black Pepper", 
-    "Beef Teriyaki", 
-    "Chicken Teriyaki Mixed Vegetables", 
-    "Greentea Banana Smoothies",
-    "Oatmeal Banana Smoothies",
-    "Oatmeal Banana Pancake",
-    "Roasted Chicken with Capcay",
-    "Satai Taichan",
-    "Sesame Tempe Mixed Vegetables",
-    "Sesame Tempe with Capcay",
-    "Shrimp with Oyster Sauce Mixed Vegetables",
-    "Roasted Chicken with Broccoli"
-  ]
-  var src = [
-    "asset/img/menu/Balinese_chicken_with_mixed_vegetables.jpg", 
-    "asset/img/menu/Ballinese_grilled_chicken_with_broccoli.jpg", 
-    "asset/img/menu/Beef_blackpepper.jpg", 
-    "asset/img/menu/beef_teriyaki.jpg", 
-    "asset/img/menu/chicken_teriyaki.jpg", 
-    "asset/img/menu/Greentea_banana_smoothies.jpg",
-    "asset/img/menu/Oatmeal_banana_smoothies.jpg",
-    "asset/img/menu/Pancake.jpg",
-    "asset/img/menu/Roasted_chicken_with_capcay.jpg",
-    "asset/img/menu/satai_taichan.jpg",
-    "asset/img/menu/sesame_tempe_mixed_vegetables.jpg",
-    "asset/img/menu/sesame_tempe_with_capcay.jpg",
-    "asset/img/menu/shrimp_with_oyster_sauce.jpg",
-    "asset/img/menu/sted_chicken_with_broccoli.jpg"
-  ]
-  var price =[
-    [25, 30, 35],
-    [22, 30, 35],
-    [0,0,0],
-    [0,0,0],
-    [24, 27, 32],
-    [15,0,0],
-    [14,0,0],
-    [15, 0, 0],
-    [28,30,35],
-    [0,0,0],
-    [16,18,20],
-    [20,20,25],
-    [38,40,45],
-    [28,30,35]
-  ]
-  secondarySlider.on("move", e=>{
-    let primary = document.getElementById("primary-slider")
-    let html = document.getElementById("judul")
-    let loss = document.getElementById("loss")
-    let maintain = document.getElementById("maintain")
-    let gain = document.getElementById("gain")
-    primary.style.backgroundImage = `url(${src[e]})`
-    html.innerHTML = jud[e];
-    loss.innerHTML = price[e][0]
-    maintain.innerHTML = price[e][1]
-    gain.innerHTML = price[e][2]
-  })
-  secondarySlider.on("click", e=>{
-    console.log(e);
-    secondarySlider.go(e.index, false)
-  })
-} )
+      
     </script>
 
   </body>

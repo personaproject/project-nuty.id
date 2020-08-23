@@ -2,9 +2,24 @@
 <html lang="en">
   <head>
     <!--Font-->
-    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+       <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'> /
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> /
+    <link href="https://fonts.googleapis.com/css?family=Amatic%20SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto%20Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> /
+    <link href="https://fonts.googleapis.com/css?family=Roboto%20Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto%20Slab" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%20Dots" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet"> /
+    <link href="https://fonts.googleapis.com/css?family=Josefin%20Sans" rel="stylesheet"> /
+    <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair%20Display" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gesalio" rel="stylesheet"> /
     <!--  -->
     <!--Linked CSS-->
     <link rel="stylesheet" href="asset/css/materialize.min.css">
