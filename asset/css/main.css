@@ -307,7 +307,10 @@ Product display
 .splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev:focus{
     background: rgb(124, 178, 67);
 }
-
+/* CONTACT */
+.media-contact .socmed{
+    color: #FF9200;
+}
 /* FOOT */
 footer{
     display: grid;
@@ -320,7 +323,7 @@ footer{
 .foot{
     font-family: 'Rubik';
     text-align: center;
-    
+    color: #1F1809;
 }
 
 @media only screen and (max-width: 768px) {
