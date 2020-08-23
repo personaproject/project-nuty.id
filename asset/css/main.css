@@ -309,9 +309,16 @@ Product display
 }
 
 /* FOOT */
-.foot{
-
+footer{
+    display: grid;
+    width: 100%;
+    height: 50px;
     background-color: #FF9200;
+    place-content: center;
+    place-items: center;
+}
+.foot{
+    font-family: 'Rubik';
     text-align: center;
     
 }
