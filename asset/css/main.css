@@ -49,6 +49,7 @@ html{
     place-items: center;
     place-content: center;
 }
+
 /* SECTION UP */
 .carousel{
     height: 100vh;
@@ -115,6 +116,7 @@ nav{
     color: #FFFEC8;
     
 }
+
 /* SSECTION DOWN */
 .row{
     text-align: center;
@@ -179,9 +181,9 @@ nav{
 .row .media-contact a{
     color: #FF9200;
 }
-/*
-Product display
-*/
+
+
+/* Product display */
 .product{
     display: flex;
     height: 100vh;
@@ -286,6 +288,7 @@ Product display
 .spd-c{
     height: calc(100vh - 11.5vw);
 }
+
 /*Splide*/
 .splide__slide{
     cursor: pointer;
