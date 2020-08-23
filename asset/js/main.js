@@ -38,22 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }); 
     var collap = document.querySelectorAll('.collapsible');
     var initCollap = M.Collapsible.init(collap, {});
-
+    var secondarySlider;
     //Product display Init
-    var par = document.getElementById("parentes").offsetHeight;
-    //Right Slider
-    var secondarySlider = new Splide( '#secondary-slider', {
-      type        : "loop",
-      height      : par ,
-      gap         : 10,
-      perPage     : 4,
-      isNavigation: true,
-      rewind      : true,
-      cover       : true,
-      pagination  : false,
-      focus       : 'center',
-      direction   : 'ttb', //top to bottom
-    } )
     if(isMobile){
       secondarySlider = new Splide( '#secondary-slider', {
         type        : "loop",
@@ -68,6 +54,21 @@ document.addEventListener('DOMContentLoaded', function() {
         focus       : 'center',
         direction   : 'ltr', 
       })
+    }else{
+      var par = document.getElementById("parentes").offsetHeight;
+    //Right Slider
+    secondarySlider = new Splide( '#secondary-slider', {
+      type        : "loop",
+      height      : par ,
+      gap         : 10,
+      perPage     : 4,
+      isNavigation: true,
+      rewind      : true,
+      cover       : true,
+      pagination  : false,
+      focus       : 'center',
+      direction   : 'ttb', //top to bottom
+    } )
     }
     secondarySlider.mount();
     //Left Slider response
@@ -166,6 +167,7 @@ window.onscroll = function(){
 //resize event
 window.addEventListener("resize", function(){
   var par = document.getElementById("parentes").offsetHeight;
+  if(!isMobile){
     //Right Slider
     var secondarySlider = new Splide( '#secondary-slider', {
       type        : "loop",
@@ -179,8 +181,7 @@ window.addEventListener("resize", function(){
       focus       : 'center',
       direction   : 'ttb', //top to bottom
     } ).mount();
-    console.log("masuk", par)
     var x = document.getElementById("parentes").offsetWidth.toString()
     document.querySelectorAll("button.splide__arrow").forEach(e=>{
-    e.style.width = `${x}px`;}) 
+    e.style.width = `${x}px`;}) }
 })
