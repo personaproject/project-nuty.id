@@ -169,11 +169,15 @@ nav{
 }
 
 
-/*  */
+/* CONTACT */
 .lower h3{
     color: #FF9200;
 }
 .lower p{
+    color: #FF9200;
+}
+
+.row .media-contact a{
     color: #FF9200;
 }
 /*
@@ -307,10 +311,7 @@ Product display
 .splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev:focus{
     background: rgb(124, 178, 67);
 }
-/* CONTACT */
-.socmed a{
-    color: #FF9200;
-}
+
 /* FOOT */
 footer{
     display: grid;
