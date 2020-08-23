@@ -306,6 +306,13 @@ Product display
     background: rgb(124, 178, 67);
 }
 
+/* FOOT */
+.foot{
+
+    background-color: #FF9200;
+    text-align: center;
+    
+}
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
