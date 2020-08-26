@@ -34,7 +34,7 @@ html{
     width: 90%;
 }
 .rounded{
-    border-radius: 18px;
+    border-radius: 1em;
 }
 .h100{
     min-height: 100vh;
