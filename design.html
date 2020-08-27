@@ -23,13 +23,20 @@
     <title>Nuty.ID</title>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     
-    <!--Additional CSS (for Developing only)-->\
+    <!--Additional CSS (for Developing only)-->
     <style>
       .tabs{
         height: unset;
       }
       .tabs .tab{
         height: unset;
+      }
+      .tabs .tab::after{
+        content: "kkkk";
+        display: none;
+      }
+      .tabs .tab:hover:after{
+        display: block;
       }
     </style>
   </head>

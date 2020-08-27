@@ -59,6 +59,7 @@ var modal = document.querySelectorAll(".modal");
 var collap = document.querySelectorAll('.collapsible');
 var par = document.getElementById("parentes").offsetHeight;
 var dom = document.getElementById("navbar")
+var secondarySlider;
 
 //DOM Load
 document.addEventListener('DOMContentLoaded', function() {
@@ -74,9 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
         endingTop   :   "unset",
     });
     var initCollap = M.Collapsible.init(collap, {});
-    var secondarySlider;
     //Product display Init
-    if(isMobile){
+    if(isMobile || window.innerWidth <= 768){
       secondarySlider = new Splide( '#secondary-slider', {
         type        : "loop",
         fixedWidth  : 100,
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
       maintain.innerHTML = price[e][1];     //Maintain price
       gain.innerHTML = price[e][2];         //Gain price
     })
-    if(!isMobile){
+    if(!isMobile && window.innerWidth > 768){
     var x = document.getElementById("parentes").offsetWidth.toString()
     document.querySelectorAll("button.splide__arrow").forEach(e=>{
     e.style.width = `${x}px`;}) }   
@@ -142,30 +142,9 @@ function autoplay(){
 }
 //scroll event
 window.onscroll = function(){
-  if(document.documentElement.scrollTop >= document.getElementById("menu-product").offsetHeight){
+  if(document.documentElement.scrollTop >= document.getElementById("menu-product").offsetHeight*3/4){
     dom.style.display = "none";
   }else{
     dom.style.display = "block";
   }
 }
-//resize event
-window.addEventListener("resize", function(){
-  if(!isMobile){
-    //Right Slider
-    var secondarySlider = new Splide( '#secondary-slider', {
-      type        : "loop",
-      height      : par ,
-      gap         : 10,
-      perPage     : 4,
-      isNavigation: true,
-      rewind      : true,
-      cover       : true,
-      pagination  : false,
-      focus       : 'center',
-      direction   : 'ttb', //top to bottom
-    } ).mount();
-    var x = document.getElementById("parentes").offsetWidth.toString()
-    document.querySelectorAll("button.splide__arrow").forEach(e=>{
-    e.style.width = `${x}px`;}) 
-  }
-})
