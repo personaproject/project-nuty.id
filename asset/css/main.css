@@ -39,11 +39,6 @@ html{
 .h100{
     min-height: 100vh;
 }
-.section{
-    scroll-snap-align: start;
-    
-
-}
 .mid{
     display: flex;
     place-items: center;
@@ -81,7 +76,6 @@ nav{
     background-color: transparent;
     box-shadow: none;
     transition: .5s ease-in-out;
-    
 }
 .section{
     padding: 0;
