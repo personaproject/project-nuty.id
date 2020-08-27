@@ -44,9 +44,9 @@ var price =[
   ["-","-","-"],
   ["-","-","-"],
   ["24K", "27K", "32K"],
-  ["-","15K","-"],
-  ["-","14K","-"],
-  ["-", "15K", "-"],
+  ["15K","15K","15K"],
+  ["14K","14K","14K"],
+  ["15K", "15K", "15K"],
   ["28K","30K","35K"],
   ["-","-","-"],
   ["16K","18K","20K"],
@@ -54,12 +54,33 @@ var price =[
   ["38K","40K","45K"],
   ["28K","30K","35K"]
 ]
+var nutrition = [
+  [[[344.6],[11],[27.6],[33.5]], [[459.9],[15.5],[30.3],[49.3]], [[639.7],[20.2],[47],[66.5]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
+  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]]
+]
 var carousel = document.querySelectorAll('.carousel.carousel-slider');
 var modal = document.querySelectorAll(".modal");
 var collap = document.querySelectorAll('.collapsible');
 var par = document.getElementById("parentes").offsetHeight;
-var dom = document.getElementById("navbar")
+var dom = document.getElementById("navbar");
 var secondarySlider;
+var loss = document.getElementById("loss");
+var maintain = document.getElementById("maintain");
+var gain = document.getElementById("gain");
+var descHtml = document.getElementById("desc");
+
 
 //DOM Load
 document.addEventListener('DOMContentLoaded', function() {
@@ -120,15 +141,17 @@ document.addEventListener('DOMContentLoaded', function() {
     //Right slider eventHandler
     secondarySlider.on("move", e=>{
       let html = document.getElementById("judul")
-      let loss = document.getElementById("loss")
-      let maintain = document.getElementById("maintain")
-      let gain = document.getElementById("gain")
-      let descHtml = document.getElementById("desc")
       descHtml.innerHTML = desc[e];         //Change description
       html.innerHTML = jud[e];              //Change menu name
-      loss.innerHTML = price[e][0];         //Loss-weight price
-      maintain.innerHTML = price[e][1];     //Maintain price
-      gain.innerHTML = price[e][2];         //Gain price
+      loss.innerHTML = price[e][0];
+      loss.onmousemove = function(){pricing(e, 0)};
+      loss.onmouseover = function(){deskripsi(e)};         //Loss-weight price
+      maintain.innerHTML = price[e][1];
+      maintain.onmousemove = function(){pricing(e, 1)};
+      maintain.onmouseover = function(){deskripsi(e)};     //Maintain price
+      gain.innerHTML = price[e][2];
+      gain.onmousemove = function(){pricing(e, 2)};
+      gain.onmouseover = function(){deskripsi(e)};         //Gain price
     })
     if(!isMobile && window.innerWidth > 768){
     var x = document.getElementById("parentes").offsetWidth.toString()
@@ -147,4 +170,24 @@ window.onscroll = function(){
   }else{
     dom.style.display = "block";
   }
+}
+
+//price event
+function pricing(x, y){
+    let calories = nutrition[x][y][0];
+    let fat = nutrition[x][y][1];
+    let carbohidrate = nutrition[x][y][2];
+    let protein = nutrition[x][y][3];
+    let plus = `
+    <p>${calories} kcal</p>
+    <p>${fat} g</p>
+    <p>${carbohidrate} g</p>
+    <p>${protein} g</p>
+    `
+    if(descHtml.innerHTML != plus){
+    descHtml.innerHTML = plus;}
+}
+function deskripsi(x){
+  if(descHtml != desc[x]){
+    descHtml.innerHTML = desc[x];}
 }

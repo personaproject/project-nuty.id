@@ -44,6 +44,9 @@ html{
     place-items: center;
     place-content: center;
 }
+#desc{
+    transition: all .5s ease-in-out;
+}
 
 /* SECTION UP */
 .carousel{
