@@ -56,19 +56,19 @@ var price =[
 ]
 var nutrition = [
   [[[344.6],[11],[27.6],[33.5]], [[459.9],[15.5],[30.3],[49.3]], [[639.7],[20.2],[47],[66.5]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]],
-  [[[],[],[],[]], [[],[],[],[]], [[],[],[],[]]]
+  [[[304.6],[7.6],[28.4],[28.7]], [[491.9],[14],[36.5],[51.2]], [[607.2],[18.6],[38.5],[66.9]]],
+  [[[432.5],[18.61],[44.76],[23.44]], [[540.59],[24.56],[51.83],[30.44]], [[702.54],[31.77],[67.29],[39.51]]],
+  [[[418.8],[17.56],[40.87],[23.16]], [[484.39],[21.05],[45.64],[27.45]], [[699.68],[32.66],[58.54],[41.47]]],
+  [[[300.9],[10.8],[35.3],[16.3]], [[46.3],[19],[42.3],[30.2]], [[629.7],[27.8],[49.2],[44.1]]],
+  [[[329.6],[7.7],[63.3],[7.25]], [[329.6],[7.7],[63.3],[7.25]], [[329.6],[7.7],[63.3],[7.25]]],
+  [[[328],[8.7],[6.6],[10.1]], [[328],[8.7],[6.6],[10.1]], [[328],[8.7],[6.6],[10.1]]],
+  [[[352.7],[10.1],[5.6],[14.9]], [[352.7],[10.1],[5.6],[14.9]], [[352.7],[10.1],[5.6],[14.9]]],
+  [[[348.5],[13],[34],[23.6]], [[495.1],[17.3],[1.9],[31.8]], [[717.4],[25.7],[72.4],[46,8]]],
+  [[[341.7],[10.1],[36.4],[27.24]], [[448.65],[13.67],[47.069],[36.25]], [[671.85],[19.73],[70.15],[54.05]]],
+  [[[308.1],[14.5],[33.1],[14.9]], [[496.5],[22],[56.8],[23.2]], [[799.5],[43.6],[71.8],[42.5]]],
+  [[[321.6],[11],[47],[12.6]], [[393.7],[13],[57.1],[14.3]], [[739.7],[33.1],[89.9],[30.3]]],
+  [[[421.6],[15.8],[38.3],[30.9]], [[575.4],[22.7],[46.4],[45.4]], [[793.7],[29.8],[68.4],[61.3]]],
+  [[[397.4],[16.8],[30.8],[30.8]], [[440],[16.8],[40.9],[31.5]], [[725.8],[33.3],[46.7],[58.7]]]
 ]
 var carousel = document.querySelectorAll('.carousel.carousel-slider');
 var modal = document.querySelectorAll(".modal");
@@ -76,10 +76,17 @@ var collap = document.querySelectorAll('.collapsible');
 var par = document.getElementById("parentes").offsetHeight;
 var dom = document.getElementById("navbar");
 var secondarySlider;
-var loss = document.getElementById("loss");
-var maintain = document.getElementById("maintain");
-var gain = document.getElementById("gain");
+var loss = document.querySelector("#loss h3");
+var lossOn = document.getElementById("loss");
+var lossMbl = document.getElementById("lossMbl");
+var maintain = document.querySelector("#maintain h3");
+var maintainOn = document.getElementById("maintain");
+var maintainMbl = document.getElementById("maintainMbl")
+var gain = document.querySelector("#gain h3");
+var gainOn = document.getElementById("gain");
+var gainMbl = document.getElementById("gainMbl");
 var descHtml = document.getElementById("desc");
+var tabs = document.querySelectorAll(".tabs");
 
 
 //DOM Load
@@ -96,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         endingTop   :   "unset",
     });
     var initCollap = M.Collapsible.init(collap, {});
+    var initTabs = M.Tabs.init(tabs, {});
     //Product display Init
     if(isMobile || window.innerWidth <= 768){
       secondarySlider = new Splide( '#secondary-slider', {
@@ -144,14 +152,18 @@ document.addEventListener('DOMContentLoaded', function() {
       descHtml.innerHTML = desc[e];         //Change description
       html.innerHTML = jud[e];              //Change menu name
       loss.innerHTML = price[e][0];
-      loss.onmousemove = function(){pricing(e, 0)};
-      loss.onmouseover = function(){deskripsi(e)};         //Loss-weight price
+      lossOn.onmousemove = function(){pricing(e, 0)};
+      lossOn.onmouseover = function(){deskripsi(e)};         //Loss-weight price
       maintain.innerHTML = price[e][1];
-      maintain.onmousemove = function(){pricing(e, 1)};
-      maintain.onmouseover = function(){deskripsi(e)};     //Maintain price
+      maintainOn.onmousemove = function(){pricing(e, 1)};
+      maintainOn.onmouseover = function(){deskripsi(e)};     //Maintain price
       gain.innerHTML = price[e][2];
-      gain.onmousemove = function(){pricing(e, 2)};
-      gain.onmouseover = function(){deskripsi(e)};         //Gain price
+      gainOn.onmousemove = function(){pricing(e, 2)};
+      gainOn.onmouseover = function(){deskripsi(e)};         //Gain price
+      //Mobile action
+      lossMbl.innerHTML = getNutrition(e, 0);
+      maintainMbl.innerHTML = getNutrition(e, 1);
+      gainMbl.innerHTML = getNutrition(e, 2);
     })
     if(!isMobile && window.innerWidth > 768){
     var x = document.getElementById("parentes").offsetWidth.toString()
@@ -173,18 +185,57 @@ window.onscroll = function(){
 }
 
 //price event
+function getNutrition(x, y){
+  let calories = nutrition[x][y][0];
+  let fat = nutrition[x][y][1];
+  let carbohidrate = nutrition[x][y][2];
+  let protein = nutrition[x][y][3];
+  let jenis;
+  switch(y){
+    case 0:
+      jenis = "Loss Weight"
+      break;
+    case 1:
+      jenis = "Maintain"
+      break;
+    case 2:
+      jenis = "Gain"
+      break;
+  }
+  let plus = `
+  <h3>${jenis}</h3>
+  <p>Calories ${calories} kcal</p>
+  <p>Total Fat  ${fat} g</p>
+  <p>Carbohidrat ${carbohidrate} g</p>
+  <p>Protein ${protein} g</p>
+  `
+  return(plus);
+}
 function pricing(x, y){
-    let calories = nutrition[x][y][0];
-    let fat = nutrition[x][y][1];
-    let carbohidrate = nutrition[x][y][2];
-    let protein = nutrition[x][y][3];
-    let plus = `
-    <p>${calories} kcal</p>
-    <p>${fat} g</p>
-    <p>${carbohidrate} g</p>
-    <p>${protein} g</p>
-    `
-    if(descHtml.innerHTML != plus){
+  let calories = nutrition[x][y][0];
+  let fat = nutrition[x][y][1];
+  let carbohidrate = nutrition[x][y][2];
+  let protein = nutrition[x][y][3];
+  let jenis;
+  switch(y){
+    case 0:
+      jenis = "Loss Weight"
+      break;
+    case 1:
+      jenis = "Maintain"
+      break;
+    case 2:
+      jenis = "Gain"
+      break;
+  }
+  let plus = `
+  <h3>${jenis}</h3>
+  <p>Calories ${calories} kcal</p>
+  <p>Total Fat  ${fat} g</p>
+  <p>Carbohidrat ${carbohidrate} g</p>
+  <p>Protein ${protein} g</p>
+  `
+  if(descHtml.innerHTML != plus){
     descHtml.innerHTML = plus;}
 }
 function deskripsi(x){

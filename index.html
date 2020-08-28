@@ -215,21 +215,63 @@
                   <div class="card-panel h65 rounded pnl-3 "  style="background-image: url(asset/img/bg-geo.jpg)" >
                     <p id="desc">Ayam panggang bercampur sambal matah dipadukan dengan tumis wortel dan buncis serta nasi</p>
                   </div>
-                  <div class="row">
-                    <div class="col s4">
-                      <div class="card-panel h253 rounded pnl-4 fnt noselect">
-                        <h3 class="center" id="loss" onmousemove="pricing(0,0)" onmouseout="deskripsi(0)">25K</h3>
+                  <div class="row hide-on-med-and-down">
+                    <div class="col s4" id="loss" onmousemove="pricing(0,0)" onmouseout="deskripsi(0)">
+                      <div class="card-panel h253 rounded pnl-4 fnt noselect" >
+                        <h3 class="center">25K</h3>
                       </div>
                     </div>
-                    <div class="col s4">
+                    <div class="col s4" id="maintain" onmousemove="pricing(0,1)" onmouseout="deskripsi(0)">
                       <div class="card-panel h253 rounded pnl-5 fnt noselect">
-                        <h3 class="center" id="maintain" onmousemove="pricing(0,1)" onmouseout="deskripsi(0)">30K</h3>
+                        <h3 class="center" >30K</h3>
                       </div>
                     </div>
-                    <div class="col s4">
+                    <div class="col s4" id="gain" onmousemove="pricing(0,2)" onmouseout="deskripsi(0)">
                       <div class="card-panel h253 rounded pnl-6 fnt noselect">
-                        <h3 class="center" id="gain" onmousemove="pricing(0,2)" onmouseout="deskripsi(0)">35K</h3>
+                        <h3 class="center">35K</h3>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row hide-on-large-only white rounded">
+                    <div class="col s12">
+                      <ul class="tabs">
+                        <li class="tab col s4"><a class="active" href="#lossMbl">
+                          <div class="card-panel h253 rounded pnl-4 fnt">
+                            <h3 class="center" id="loss">25K</h3>
+                          </div>
+                        </a></li>
+                        <li class="tab col s4"><a href="#maintainMbl">
+                          <div class="card-panel h253 rounded pnl-5 fnt">
+                            <h3 class="center" id="maintain">30K</h3>
+                        </div>
+                      </a></li>
+                        <li class="tab col s4"><a href="#gainMbl">
+                          <div class="card-panel h253 rounded pnl-6 fnt">
+                            <h3 class="center" id="gain">35K</h3>
+                          </div>
+                        </a></li>
+                      </ul>
+                    </div>
+                    <div id="lossMbl" class="col s12">
+                      <h3>Loss Weight</h3>
+                      <p>Calories 344.6 kcal</p>
+                      <p>Total Fat  11 g</p>
+                      <p>Carbohidrat 27.6 g</p>
+                      <p>Protein 33.5 g</p>
+                    </div>
+                    <div id="maintainMbl" class="col s12">
+                      <h3>Maintain</h3>
+                      <p>Calories 459.9 kcal</p>
+                      <p>Total Fat  15.5 g</p>
+                      <p>Carbohidrat 30.3 g</p>
+                      <p>Protein 49.3 g</p>
+                    </div>
+                    <div id="gainMbl" class="col s12">
+                      <h3>Gain</h3>
+                      <p>Calories 639.7 kcal</p>
+                      <p>Total Fat  20.2 g</p>
+                      <p>Carbohidrat 47 g</p>
+                      <p>Protein 66.5 g</p>
                     </div>
                   </div>
                 </div>

@@ -313,7 +313,16 @@ nav{
 .splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev:focus{
     background: rgb(124, 178, 67);
 }
-
+/* Tabs */
+.tabs{
+    height: unset;
+  }
+.tabs .tab{
+    height: unset;
+  }
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: transparent;
+}
 /* FOOT */
 footer{
     display: grid;
