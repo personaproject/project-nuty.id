@@ -16,6 +16,13 @@ html{
 .nuty-color{
     background-color: #FFFEC8;
 }
+.nuty-a{
+    /* background-color: #FFF7ED; */
+    background-color: #FFFFED;
+}
+.nuty-black{
+    background-color: black;
+}
 .bg-contain1{
     background-color: #FF9200;
 }
@@ -257,31 +264,39 @@ nav{
 }
 
 .pnl-1{
-    background-color: #FFFEC8;
+    /* background-color: #FFFEC8; */
+    background-color: inherit;
     color: #1F1809 ;
     font-family: 'Ubuntu'; 
 }
 .pnl-2{
     background-size: cover;
+    /* background-color: #FFFEC8; */
     background-color: #FFFEC8;
 }
 .pnl-3{
-    background-color: rgb(209, 209, 209) ;
+    background-color: #FFFEC8 ;
     background-size: cover;
     font-family: 'Didact Gothic';
 }
 .pnl-4{
-    background-color: rgb(223, 152, 0);
+    /* background-color: rgb(223, 152, 0); */
+    /* background-color: #DBFFC7; */
+    background-color: #FFD8A4;
     /* color: #1F1809 ; */
     color: #FFFEC8;
 }
 .pnl-5{
-    background-color: rgb(124, 178, 67) ;
+    /* background-color: rgb(124, 178, 67) ; */
+    /* background-color: #FFFEC8; */
+    background-color: #FFB85B;
     /* color: #1F1809 ; */
     color: #FFFEC8;
 }
 .pnl-6{
-    background-color: rgb(204, 214, 16);
+    /* background-color: rgb(204, 214, 16); */
+    /* background-color: #FFD9C7; */
+    background-color: #FF9812;
     /* color: #1F1809 ; */
     color: #FFFEC8;
 }
@@ -291,13 +306,20 @@ nav{
 .spd-c{
     height: calc(100vh - 11.5vw);
 }
+#primary-slider.splides{
+    background-image: url(asset/img/bg-geo.jpg);
+}
+#parentes{
+    background-color: inherit;
+}
 
 /*Splide*/
 .splide__slide{
     cursor: pointer;
 }
 .splide--nav > .splide__track > .splide__list > .splide__slide.is-active{
-    border-color: rgb(124, 178, 67);
+    /* border-color: rgb(124, 178, 67); */
+    border-color: #FFFEC8;
 }
 .splide__arrow{
     height: 2.5em;
@@ -311,10 +333,12 @@ nav{
     top: 0;
 }
 .splide--ttb > .splide__arrows .splide__arrow--next, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--next:focus{
-    background: rgb(124, 178, 67);
+    /* background: rgb(124, 178, 67); */
+    background: #FFFEC8;
 }
 .splide--ttb > .splide__arrows .splide__arrow--prev, .splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev:focus{
-    background: rgb(124, 178, 67);
+    /* background: rgb(124, 178, 67); */
+    background: #FFFEC8;
 }
 
 /* FOOT */
