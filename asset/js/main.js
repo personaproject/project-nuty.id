@@ -76,15 +76,15 @@ var collap = document.querySelectorAll('.collapsible');
 var par = document.getElementById("parentes").offsetHeight;
 var dom = document.getElementById("navbar");
 var secondarySlider;
-var loss = document.querySelector("#loss h5");
+var loss = document.querySelector("#loss h3");
 var loss2 = document.querySelector("#loss2 h5");
 var lossOn = document.getElementById("loss");
 var lossMbl = document.getElementById("lossMbl");
-var maintain = document.querySelector("#maintain h5");
+var maintain = document.querySelector("#maintain h3");
 var maintain2 = document.querySelector("#maintain2 h5");
 var maintainOn = document.getElementById("maintain");
 var maintainMbl = document.getElementById("maintainMbl")
-var gain = document.querySelector("#gain h5");
+var gain = document.querySelector("#gain h3");
 var gain2 = document.querySelector("#gain2 h5");
 var gainOn = document.getElementById("gain");
 var gainMbl = document.getElementById("gainMbl");
@@ -209,7 +209,7 @@ function getNutrition(x, y){
       break;
   }
   let plus = `
-  <h3>${jenis}</h3>
+  <h5>${jenis}</h5>
   <p>Calories ${calories} kcal</p>
   <p>Total Fat  ${fat} g</p>
   <p>Carbohidrat ${carbohidrate} g</p>
@@ -235,7 +235,7 @@ function pricing(x, y){
       break;
   }
   let plus = `
-  <h5>${jenis}</h5>
+  <h3>${jenis}</h3>
   <p>Calories ${calories} kcal</p>
   <p>Total Fat  ${fat} g</p>
   <p>Carbohidrat ${carbohidrate} g</p>
