@@ -77,12 +77,15 @@ var par = document.getElementById("parentes").offsetHeight;
 var dom = document.getElementById("navbar");
 var secondarySlider;
 var loss = document.querySelector("#loss h3");
+var loss2 = document.querySelector("#loss2 h3");
 var lossOn = document.getElementById("loss");
 var lossMbl = document.getElementById("lossMbl");
 var maintain = document.querySelector("#maintain h3");
+var maintain2 = document.querySelector("#maintain2 h3");
 var maintainOn = document.getElementById("maintain");
 var maintainMbl = document.getElementById("maintainMbl")
 var gain = document.querySelector("#gain h3");
+var gain2 = document.querySelector("#gain2 h3");
 var gainOn = document.getElementById("gain");
 var gainMbl = document.getElementById("gainMbl");
 var descHtml = document.getElementById("desc");
@@ -152,12 +155,15 @@ document.addEventListener('DOMContentLoaded', function() {
       descHtml.innerHTML = desc[e];         //Change description
       html.innerHTML = jud[e];              //Change menu name
       loss.innerHTML = price[e][0];
+      loss2.innerHTML = price[e][0];
       lossOn.onmousemove = function(){pricing(e, 0)};
       lossOn.onmouseover = function(){deskripsi(e)};         //Loss-weight price
       maintain.innerHTML = price[e][1];
+      maintain2.innerHTML = price[e][1];
       maintainOn.onmousemove = function(){pricing(e, 1)};
       maintainOn.onmouseover = function(){deskripsi(e)};     //Maintain price
       gain.innerHTML = price[e][2];
+      gain2.innerHTML = price[e][2];
       gainOn.onmousemove = function(){pricing(e, 2)};
       gainOn.onmouseover = function(){deskripsi(e)};         //Gain price
       //Mobile action
@@ -183,6 +189,11 @@ window.onscroll = function(){
     dom.style.display = "block";
   }
 }
+
+//resize event
+window.addEventListener("resize", val=>{
+  console.log(val);
+})
 
 //price event
 function getNutrition(x, y){
