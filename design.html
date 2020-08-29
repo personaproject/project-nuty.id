@@ -24,20 +24,53 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     
     <!--Additional CSS (for Developing only)-->
+    <style>
+      .tabs{
+        height: unset;
+      }
+      .tabs .tab{
+        height: unset;
+      }
+      .tabs .tab::after{
+        content: "kkkk";
+        display: none;
+      }
+      .tabs .tab:hover:after{
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <header>                
     </header>
     
     <main>
-        <div class="parents">
-          <div class="child red"></div>
-          <div class="child green"></div>
-          <div class="child blue"></div>
-          <div class="child red"></div>
-          <div class="child green"></div>
-          <div class="child blue"></div>
+      <div class="section h100 mid">
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s4"><a href="#test1">
+                <div class="card-panel h253 rounded pnl-4 fnt">
+                  <h3 class="center" id="loss">25K</h3>
+                </div>
+              </a></li>
+              <li class="tab col s4"><a class="active" href="#test2">
+                <div class="card-panel h253 rounded pnl-5 fnt">
+                  <h3 class="center" id="maintain">30K</h3>
+              </div>
+            </a></li>
+              <li class="tab col s4"><a href="#test3">
+                <div class="card-panel h253 rounded pnl-6 fnt">
+                  <h3 class="center" id="gain">35K</h3>
+                </div>
+              </a></li>
+            </ul>
+          </div>
+          <div id="test1" class="col s12">Test 1</div>
+          <div id="test2" class="col s12">Test 2</div>
+          <div id="test3" class="col s12">Test 3</div>
         </div>
+      </div>
     </main>
     <footer></footer>
 
@@ -46,7 +79,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
     <script>
-      
+      document.addEventListener('DOMContentLoaded', function(){
+        let tabPrice = document.querySelectorAll(".tabs");
+        let initTab = M.Tabs.init(tabPrice, {})
+      })
     </script>
 
   </body>

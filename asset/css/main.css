@@ -46,15 +46,13 @@ html{
 .h100{
     min-height: 100vh;
 }
-.section{
-    scroll-snap-align: start;
-    
-
-}
 .mid{
     display: flex;
     place-items: center;
     place-content: center;
+}
+#desc{
+    transition: all .5s ease-in-out;
 }
 
 /* SECTION UP */
@@ -88,7 +86,6 @@ nav{
     background-color: transparent;
     box-shadow: none;
     transition: .5s ease-in-out;
-    
 }
 .section{
     padding: 0;
@@ -340,7 +337,16 @@ nav{
     /* background: rgb(124, 178, 67); */
     background: #FFFEC8;
 }
-
+/* Tabs */
+.tabs{
+    height: unset;
+  }
+.tabs .tab{
+    height: unset;
+  }
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: transparent;
+}
 /* FOOT */
 footer{
     display: grid;
