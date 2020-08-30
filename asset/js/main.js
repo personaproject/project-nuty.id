@@ -199,7 +199,7 @@ function getNutrition(x, y){
   let jenis;
   switch(y){
     case 0:
-      jenis = "Loss Weight"
+      jenis = "Loss"
       break;
     case 1:
       jenis = "Maintain"
@@ -225,7 +225,7 @@ function pricing(x, y){
   let jenis;
   switch(y){
     case 0:
-      jenis = "Loss Weight"
+      jenis = "Loss"
       break;
     case 1:
       jenis = "Maintain"

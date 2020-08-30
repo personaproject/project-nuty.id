@@ -20,8 +20,8 @@ html{
     /* background-color: #FFF7ED; */
     background-color: #FFFFED;
 }
-.nuty-black{
-    background-color: black;
+.nuty-font-color{
+    color: #1F1809;
 }
 .bg-contain1{
     background-color: #FF9200;
@@ -279,16 +279,18 @@ nav{
 .pnl-4{
     /* background-color: rgb(223, 152, 0); */
     /* background-color: #DBFFC7; */
-    background-color: #FFD8A4;
+    background-color: #FFB85B;
     /* color: #1F1809 ; */
     color: #FFFEC8;
+    /* color: #544118; */
 }
 .pnl-5{
     /* background-color: rgb(124, 178, 67) ; */
     /* background-color: #FFFEC8; */
-    background-color: #FFB85B;
+    background-color: #FFA837;
     /* color: #1F1809 ; */
     color: #FFFEC8;
+    /* color: #544118; */
 }
 .pnl-6{
     /* background-color: rgb(204, 214, 16); */
@@ -296,6 +298,7 @@ nav{
     background-color: #FF9812;
     /* color: #1F1809 ; */
     color: #FFFEC8;
+    /* color: #544118; */
 }
 .fnt h3{
     font-weight: bolder;
@@ -309,7 +312,18 @@ nav{
 #parentes{
     background-color: inherit;
 }
+/*  */
+/* .col .card-panel.pnl-3{
+    
+}
 
+.pnl-4:hover .col .card-panel.pnl-3{
+    background-color: rgba(0, 0, 0, .25);
+}
+
+#lossMbl.col.s12{
+    background-color: rgba(0, 0, 0, 0.034);
+} */
 /*Splide*/
 .splide__slide{
     cursor: pointer;
@@ -337,15 +351,22 @@ nav{
     /* background: rgb(124, 178, 67); */
     background: #FFFEC8;
 }
+button.splide__arrow:focus{
+    background-color: #FFFEC8;
+}
 /* Tabs */
 .tabs{
     height: unset;
+    
   }
 .tabs .tab{
     height: unset;
   }
 .tabs .tab a:focus, .tabs .tab a:focus.active{
     background-color: transparent;
+}
+.tabs.indicator{
+    background-color:#1F1809 ;
 }
 /* FOOT */
 footer{
