@@ -165,14 +165,6 @@ nav{
 .modal-content .row{
     height: 100%;
 }
-.modal-content{
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.modal-content::-webkit-scrollbar {
-    display: none;
-}
 
 
 /* CONTACT */
