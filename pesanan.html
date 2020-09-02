@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'> 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin%20Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gelasio" rel="stylesheet"> 
+
+    <!--Linked CSS-->
+    <link rel="stylesheet" href="asset/css/materialize.min.css">
+    <link rel="stylesheet" href="asset/css/animate.css">
+    <link rel="stylesheet" href="asset/css/main.css">
+    
+    <!--SEO-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='NutyID - Nutritious and Tasty' name='Keywords'/>
+    <meta content="Deskripsi Nuty disini" name="Description">
+    <meta content='google-verif' name='google-site-verification'/>
+    <meta content='bing-verif' name='msvalidate.01'/>
+    <meta content='alexa-verif' name='alexaVerifyID'/>
+    
+    <!--Title and Icon-->
+    <title>Pesanan - Nuty.ID</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="asset/img/favicon.ico" type="image/x-icon">
+    <!--Additional CSS (for Developing only)-->
+    <style>
+          body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+    </style>
+  </head>
+  <body id="body">
+    <header>  
+  <nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">
+            <img src="asset/img/nuty.svg" alt="">
+          </a>   
+    </div>
+  </nav>
+                
+    </header>
+    
+    <main>
+        <div class="section">
+            <div class="container">
+            <h4 class="center">Daftar Pesanan</h4>
+            <h5 class="left" id="nama"></h5>
+              <div class="right"><p id="alamat"></p>
+              <p id="tanggal"></p></div>
+            <table id="pesanan" class="bordered centered">
+                <thead>
+                  <tr>
+                    <th data-field="no">No</th>
+                    <th data-field="name">Item Name</th>
+                    <th data-field="portion">Portion</th>
+                    <th data-field="qty">Qty</th>
+                    <th data-field="price">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+        </div></div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        © 2020 Persona Creative
+      </div>
+    </footer>
+
+    <script src="asset/js/jquery-3.5.1.min.js"></script>
+    <script src="asset/js/materialize.min.js"></script>
+    <script src="asset/js/menu.js"></script>
+    <script>
+    var myDec = decipher("nuty");
+    var id = new URLSearchParams(window.location.search);
+    var data = myDec(id.get("id"));
+    var json = JSON.parse(data);
+    document.getElementById("nama").innerHTML = `Nama = ${json.nama}`;
+    document.getElementById("alamat").innerHTML = `Alamat = ${json.alamat}`
+    document.getElementById("tanggal").innerHTML = `Tanggal Pemesanan = ${json.tanggal}`
+    var pesan = json.pesanan;
+    var table = document.querySelector("#pesanan tbody");
+    var counter = 0;
+    var tambah = "";
+    var tot = 0;
+    pesan.forEach(b=>{
+        counter++;
+        let harga = price[b[0]][b[1]]
+        if(harga == "-"){
+            harga = "0K";
+          }
+        let pricing = parseInt(harga.slice(0,harga.length-1))*1000*parseInt(b[2]);
+        tambah += `
+        <tr> 
+          <td>${counter}</td>
+          <td>${jud[b[0]]}</td>
+          <td>${portion[b[1]]}</td>
+          <td>${b[2]}</td>
+          <td>${pricing}</td>
+          </tr>
+        `;
+        tot += pricing
+    });
+    tambah += `
+    <tr> 
+          <td></td>
+          <td><b>Total</b></td>
+          <td></td>
+          <td></td>
+          <td>${tot}</td>
+    </tr>
+    `
+    table.innerHTML = tambah;
+    </script>
+
+  </body>
+</html>

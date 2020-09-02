@@ -165,29 +165,6 @@ nav{
 .modal-content .row{
     height: 100%;
 }
-.modal-content{
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.modal-content::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* CONTACT */
-.lower h3{
-    color: #FF9200;
-}
-.lower p{
-    color: #FF9200;
-}
-.row .media-contact a{
-    color: #FF9200;
-}
-.socmed{
-    font-family: 'Inter';
-}
 
 
 /* Product display */
@@ -226,7 +203,7 @@ nav{
     padding-bottom: 5vw;
     
 }
-.card-panel.no-shadow{
+.no-shadow{
     box-shadow: none;
 }
 .card-panel.h65{
@@ -330,7 +307,7 @@ nav{
 }
 .splide--nav > .splide__track > .splide__list > .splide__slide.is-active{
     /* border-color: rgb(124, 178, 67); */
-    border-color: #FFFEC8;
+    border-color: #FF9200;
 }
 .splide__arrow{
     height: 2.5em;
@@ -368,6 +345,40 @@ button.splide__arrow:focus{
 .tabs.indicator{
     background-color:#1F1809 ;
 }
+/* Other */
+.bulet{
+    border-radius: 2em;
+    background: #fffa01;
+    /* color: #FFFEC8; */
+    color: #1F1809;
+}
+.bulet:hover{
+    color: #FFFEC8;
+    background: #FF9200;
+    box-shadow: none;
+}
+.closer{
+    color: #1F1809;
+}
+
+
+/* CONTACT */
+.lower h3{
+    color: #FF9200;
+}
+.lower p{
+    color: #FFB85B;
+}
+.row .media-contact a{
+    color: #FF9200;
+}
+.socmed{
+    font-family: 'Inter';
+    color: #1F1809;
+}
+
+
+
 /* FOOT */
 footer{
     display: grid;
