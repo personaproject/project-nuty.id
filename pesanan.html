@@ -45,7 +45,7 @@
     <header>  
   <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">
+        <a href="personaproject.github.io/project-nuty.id" class="brand-logo center">
             <img src="asset/img/nuty.svg" alt="">
           </a>   
     </div>
@@ -85,48 +85,7 @@
     <script src="asset/js/jquery-3.5.1.min.js"></script>
     <script src="asset/js/materialize.min.js"></script>
     <script src="asset/js/menu.js"></script>
-    <script>
-    var myDec = decipher("nuty");
-    var id = new URLSearchParams(window.location.search);
-    var data = myDec(id.get("id"));
-    var json = JSON.parse(data);
-    document.getElementById("nama").innerHTML = `Nama = ${json.nama}`;
-    document.getElementById("alamat").innerHTML = `Alamat = ${json.alamat}`
-    document.getElementById("tanggal").innerHTML = `Tanggal Pemesanan = ${json.tanggal}`
-    var pesan = json.pesanan;
-    var table = document.querySelector("#pesanan tbody");
-    var counter = 0;
-    var tambah = "";
-    var tot = 0;
-    pesan.forEach(b=>{
-        counter++;
-        let harga = price[b[0]][b[1]]
-        if(harga == "-"){
-            harga = "0K";
-          }
-        let pricing = parseInt(harga.slice(0,harga.length-1))*1000*parseInt(b[2]);
-        tambah += `
-        <tr> 
-          <td>${counter}</td>
-          <td>${jud[b[0]]}</td>
-          <td>${portion[b[1]]}</td>
-          <td>${b[2]}</td>
-          <td>${pricing}</td>
-          </tr>
-        `;
-        tot += pricing
-    });
-    tambah += `
-    <tr> 
-          <td></td>
-          <td><b>Total</b></td>
-          <td></td>
-          <td></td>
-          <td>${tot}</td>
-    </tr>
-    `
-    table.innerHTML = tambah;
-    </script>
+    <script src="asset/js/pesanan.js"></script>
 
   </body>
 </html>
