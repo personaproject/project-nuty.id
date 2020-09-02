@@ -62,7 +62,7 @@
           <label for="banyak">Qty</label>
           </div>
           <div class="input-field col s4 offset-s4 l1">
-            <div class="btn center" onclick="go()"><i class="material-icons">add</i></div>
+            <div class="btn center" onclick="go()"><i class="material-icons">add_shopping_cart</i></div>
           </div>
         </div>
       </form>
@@ -83,7 +83,7 @@
       <p>*Jika harga masih 0, harga belum ditentukan</p>
     </div>
     <div class="modal-footer">
-      <a id="pesan-go" href="#!" class="modal-close waves-effect waves-green btn-flat">Pesan</a>
+      <a id="pesan-go" onclick="pesanGo()" class="modal-close waves-effect waves-green btn green white-text">Pesan</a>
     </div>
   </div>
           
@@ -93,54 +93,19 @@
 
     <script src="asset/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="asset/js/menu.js"></script>
 
     <script>
 
       document.addEventListener('DOMContentLoaded', function(){
         let modals = document.querySelectorAll(".modal");
-        let initMod = M.Modal.init(modals, {});
+        let initMod = M.Modal.init(modals, {dismissible : false});
         let selects = document.querySelectorAll("select");
         let initSelect = M.FormSelect.init(selects, {});
         M.updateTextFields();
-      })
+      })   
+     
       var pesan = [];
-      var jud = [
-  "Ballinese Grilled Chicken with Mixed Vegetables", 
-  "Ballinese Grilled Chicken with Broccoli", 
-  "Beef Black Pepper", 
-  "Beef Teriyaki", 
-  "Chicken Teriyaki Mixed Vegetables", 
-  "Greentea Banana Smoothies",
-  "Oatmeal Banana Smoothies",
-  "Oatmeal Banana Pancake",
-  "Roasted Chicken with Capcay",
-  "Satai Taichan",
-  "Sesame Tempe Mixed Vegetables",
-  "Sesame Tempe with Capcay",
-  "Shrimp with Oyster Sauce Mixed Vegetables",
-  "Roasted Chicken with Broccoli"
-]
-var price =[
-  ["25K", "30K", "35K"],
-  ["22K", "30K", "35K"],
-  ["-","-","-"],
-  ["-","-","-"],
-  ["24K", "27K", "32K"],
-  ["15K","15K","15K"],
-  ["14K","14K","14K"],
-  ["15K", "15K", "15K"],
-  ["28K","30K","35K"],
-  ["-","-","-"],
-  ["16K","18K","20K"],
-  ["20K","20K","25K"],
-  ["38K","40K","45K"],
-  ["28K","30K","35K"]
-]
-var portion = [
-  "Loss",
-  "Maintain",
-  "Gain"
-]
       var menu = document.getElementById("menu");
       for(i=0;i<jud.length;i++){
         let adding = document.createElement("option");
@@ -172,8 +137,11 @@ var portion = [
   
 tampil();  
       }
-      function del(x){
-    pesan.splice(x, 1);
+function del(x){
+  if(x == "all"){
+    pesan = [];
+  }else{
+    pesan.splice(x, 1);}
     tampil();
   } 
       function tampil(){
@@ -189,13 +157,31 @@ tampil();
           <td>${portion[e[1]]}</td>
           <td>${e[2]}</td>
           <td>${parseInt(harga.slice(0,harga.length-1))*1000*parseInt(e[2])}</td>
-          <td><div class="btn red" onclick="del(${pesan.indexOf(e)})"><i class="material-icons">add</i></div></td>
+          <td><div class="btn red" onclick="del(${pesan.indexOf(e)})"><i class="material-icons">clear</i></div></td>
           </tr>
           `
         })
         let htm = document.querySelector("#pesanan tbody");
         htm.innerHTML = tambahan;
       }
+      function pesanGo(){
+        let m = M.Modal.getInstance(document.getElementById("pesan-popup"));
+        console.log(pesan.length, m)
+        if (pesan.length == 0){
+          M.toast({html: 'Anda Belum Memesan!', classes : "red"})
+        }else{
+        let date = new Date();
+        let wrote = {
+          pesanan : pesan,
+          nama : "aku",
+          tanggal : `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`
+        }
+        let mySec = cipher("nuty");
+        let ah = mySec(JSON.stringify(wrote))
+        del("all");
+        m.close();
+        open(`https://api.whatsapp.com/send?phone=6289513218842&text=Hi%0AIni%20adalah%20pesanan%20saya%0Ahttps://personaproject.github.io/project-nuty.id/pesanan.html?id=${ah}&source=&data=&app_absent=`)
+      }}
     </script>
 
   </body>
