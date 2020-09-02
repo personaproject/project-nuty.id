@@ -348,13 +348,14 @@ button.splide__arrow:focus{
 /* Other */
 .bulet{
     border-radius: 2em;
-    background: #fffa01;
+    background: #A45D00;
+    /* #371F00; */
     /* color: #FFFEC8; */
-    color: #1F1809;
+    color: #FFFEC8;
 }
 .bulet:hover{
     color: #FFFEC8;
-    background: #FF9200;
+    background: #FF9812;
     box-shadow: none;
 }
 .closer{
