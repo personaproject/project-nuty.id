@@ -98,15 +98,15 @@ document.addEventListener('DOMContentLoaded', function() {
       loss.innerHTML = price[e][0];
       loss2.innerHTML = price[e][0];
       lossOn.onmousemove = function(){pricing(e, 0)};
-      lossOn.onmouseover = function(){deskripsi(e)};         //Loss-weight price
+      lossOn.onmouseout = function(){deskripsi(e)};         //Loss-weight price
       maintain.innerHTML = price[e][1];
       maintain2.innerHTML = price[e][1];
       maintainOn.onmousemove = function(){pricing(e, 1)};
-      maintainOn.onmouseover = function(){deskripsi(e)};     //Maintain price
+      maintainOn.onmouseout = function(){deskripsi(e)};     //Maintain price
       gain.innerHTML = price[e][2];
       gain2.innerHTML = price[e][2];
       gainOn.onmousemove = function(){pricing(e, 2)};
-      gainOn.onmouseover = function(){deskripsi(e)};         //Gain price
+      gainOn.onmouseout = function(){deskripsi(e)};         //Gain price
       //Mobile action
       lossMbl.innerHTML = getNutrition(e, 0);
       maintainMbl.innerHTML = getNutrition(e, 1);
@@ -186,8 +186,7 @@ function pricing(x, y){
     descHtml.innerHTML = plus;}
 }
 function deskripsi(x){
-  if(descHtml != desc[x]){
-    descHtml.innerHTML = desc[x];}
+    descHtml.innerHTML = desc[x];
 }
 
 //pesanan
