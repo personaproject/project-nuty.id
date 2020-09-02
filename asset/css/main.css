@@ -54,7 +54,9 @@ html{
 #desc{
     transition: all .5s ease-in-out;
 }
-
+.tabs .indicator{
+    background-color: #FF9200;
+}
 /* SECTION UP */
 .carousel{
     height: 100vh;
