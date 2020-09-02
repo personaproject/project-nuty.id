@@ -27,8 +27,8 @@ var gainOn = document.getElementById("gain");
 var gainMbl = document.getElementById("gainMbl");
 var descHtml = document.getElementById("desc");
 var tabs = document.querySelectorAll(".tabs");
-
-
+let selects = document.querySelectorAll("select");
+let modals = document.querySelectorAll(".modal");
 //DOM Load
 document.addEventListener('DOMContentLoaded', function() {
     //Materialize Init component
@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     var initCollap = M.Collapsible.init(collap, {});
     var initTabs = M.Tabs.init(tabs, {});
+    let initMod = M.Modal.init(modals, {});
+    let initSelect = M.FormSelect.init(selects, {});
+    M.updateTextFields();
+
     //Product display Init
     if(isMobile || window.innerWidth <= 768){
       secondarySlider = new Splide( '#secondary-slider', {
@@ -185,3 +189,95 @@ function deskripsi(x){
   if(descHtml != desc[x]){
     descHtml.innerHTML = desc[x];}
 }
+
+//pesanan
+var pesan = [];
+      var menu = document.getElementById("menu");
+      for(i=0;i<jud.length;i++){
+        let adding = document.createElement("option");
+        adding.text = jud[i];
+        adding.value= i;
+        menu.options.add(adding);
+      }
+      function go(){
+        let menu = document.getElementById("menu").value;
+        let qty = document.getElementById("banyak").value;
+        let port = document.getElementById("jenis").value;
+        let pesenan = [menu, port, qty];
+        let isIn = false;
+        if(pesan.length > 0){
+          for(i = 0; i < pesan.length; i++){
+            if(pesan[i][0] == menu && pesan[i][1] == port){
+              isIn = true;
+              break;
+            }
+          }
+          if(isIn){
+            pesan[i][2] = (parseInt(pesan[i][2])+parseInt(qty)).toString();
+          }else{
+            pesan.push(pesenan)
+          }
+}else{
+  pesan.push(pesenan);
+}   
+  
+tampil();  
+      }
+function del(x){
+  if(x == "all"){
+    pesan = [];
+  }else{
+    pesan.splice(x, 1);}
+    tampil();
+  } 
+  
+    function tampil(){
+        let tambahan ="";
+        var tot =0;
+        pesan.forEach(e=>{
+          let harga = price[e[0]][e[1]]
+        if(harga == "-"){
+            harga = "0K";
+          }
+        let pricing = parseInt(harga.slice(0,harga.length-1))*1000*parseInt(e[2]);
+        tot += pricing;
+        tambahan += `
+          <tr> 
+          <td>${jud[e[0]]}</td>
+          <td>${portion[e[1]]}</td>
+          <td>${e[2]}</td>
+          <td>${pricing}</td>
+          <td><div class="btn red" onclick="del(${pesan.indexOf(e)})"><i class="material-icons">clear</i></div></td>
+          </tr>
+          `;
+        })
+        let htm = document.querySelector("#pesanan tbody");
+        htm.innerHTML = tambahan;
+        
+        document.getElementById("total").innerHTML = `Total  ${tot}`
+      }
+      function pesanGo(){
+        let m = M.Modal.getInstance(document.getElementById("pesan-popup"));
+        let name = document.getElementById("name").value;
+        let addr = document.getElementById("addr").value;
+        console.log(pesan.length, m)
+        if (pesan.length == 0){
+          M.toast({html: 'Anda belum memesan!', classes : "red"})
+        }else if(name == "" || addr == ""){
+          M.toast({html: 'Data pesanan belum lengkap!', classes : "red"})
+        }
+        else{
+        let date = new Date();
+        
+        let wrote = {
+          pesanan : pesan,
+          nama : name,
+          tanggal : `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`,
+          alamat : addr
+        }
+        let mySec = cipher("nuty");
+        let ah = mySec(JSON.stringify(wrote))
+        del("all");
+        m.close();
+        open(`https://api.whatsapp.com/send?phone=6289513218842&text=Hi%0AIni%20adalah%20pesanan%20saya%0Ahttps://personaproject.github.io/project-nuty.id/pesanan.html?id=${ah}&source=&data=&app_absent=`)
+      }}

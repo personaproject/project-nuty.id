@@ -43,9 +43,16 @@
       <h4>Pesan Nuty Menu</h4>
       <form>
         <div class="row">
+          <div class="input-field col s12">
+            <input  id="name" type="text" class="validate">
+          <label for="name">Nama Pemesan</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="addr" class="materialize-textarea"></textarea>
+            <label for="addr">Alamat</label>
+          </div>
           <div class="input-field col s12 l6">
             <select id="menu">
-              <option value="" disabled selected>Choose your option</option>
             </select>
             <label>Menu Name</label>
           </div>
@@ -80,6 +87,7 @@
         <tbody>
         </tbody>
       </table>
+      <h5 id="total"class="right">Total 0</h5>
       <p>*Jika harga masih 0, harga belum ditentukan</p>
     </div>
     <div class="modal-footer">
@@ -99,7 +107,7 @@
 
       document.addEventListener('DOMContentLoaded', function(){
         let modals = document.querySelectorAll(".modal");
-        let initMod = M.Modal.init(modals, {dismissible : false});
+        let initMod = M.Modal.init(modals, {});
         let selects = document.querySelectorAll("select");
         let initSelect = M.FormSelect.init(selects, {});
         M.updateTextFields();
@@ -144,37 +152,50 @@ function del(x){
     pesan.splice(x, 1);}
     tampil();
   } 
-      function tampil(){
+  
+    function tampil(){
         let tambahan ="";
+        var tot =0;
         pesan.forEach(e=>{
-          let harga = price[e[0]][e[1]];
-          if(harga == "-"){
+          let harga = price[e[0]][e[1]]
+        if(harga == "-"){
             harga = "0K";
           }
-          tambahan += `
+        let pricing = parseInt(harga.slice(0,harga.length-1))*1000*parseInt(e[2]);
+        tot += pricing;
+        tambahan += `
           <tr> 
           <td>${jud[e[0]]}</td>
           <td>${portion[e[1]]}</td>
           <td>${e[2]}</td>
-          <td>${parseInt(harga.slice(0,harga.length-1))*1000*parseInt(e[2])}</td>
+          <td>${pricing}</td>
           <td><div class="btn red" onclick="del(${pesan.indexOf(e)})"><i class="material-icons">clear</i></div></td>
           </tr>
-          `
+          `;
         })
         let htm = document.querySelector("#pesanan tbody");
         htm.innerHTML = tambahan;
+        
+        document.getElementById("total").innerHTML = `Total  ${tot}`
       }
       function pesanGo(){
         let m = M.Modal.getInstance(document.getElementById("pesan-popup"));
+        let name = document.getElementById("name").value;
+        let addr = document.getElementById("addr").value;
         console.log(pesan.length, m)
         if (pesan.length == 0){
-          M.toast({html: 'Anda Belum Memesan!', classes : "red"})
-        }else{
+          M.toast({html: 'Anda belum memesan!', classes : "red"})
+        }else if(name == "" || addr == ""){
+          M.toast({html: 'Data pesanan belum lengkap!', classes : "red"})
+        }
+        else{
         let date = new Date();
+        
         let wrote = {
           pesanan : pesan,
-          nama : "aku",
-          tanggal : `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`
+          nama : name,
+          tanggal : `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`,
+          alamat : addr
         }
         let mySec = cipher("nuty");
         let ah = mySec(JSON.stringify(wrote))
