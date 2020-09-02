@@ -259,7 +259,6 @@ function del(x){
         let m = M.Modal.getInstance(document.getElementById("pesan-popup"));
         let name = document.getElementById("name").value;
         let addr = document.getElementById("addr").value;
-        console.log(pesan.length, m)
         if (pesan.length == 0){
           M.toast({html: 'Anda belum memesan!', classes : "red"})
         }else if(name == "" || addr == ""){
