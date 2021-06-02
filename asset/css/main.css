@@ -29,6 +29,9 @@ html{
 .bg-contain2{
     background-color: #fffa01;
 }
+.nuty-text{
+    color: #FF9200;
+}
 .bg-change{
     background-color: rgba(0, 0, 0, .25);
     height: 100%;
@@ -46,6 +49,16 @@ html{
 .h100{
     min-height: 100vh;
 }
+.w100{
+    min-width: 100vw;
+}
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
 .mid{
     display: flex;
     place-items: center;
